@@ -1,0 +1,38 @@
+{
+    "navbar": {
+        "Цент программирование": "Programming Center",
+        "Главная": "Main",
+        "Курсы": "Courses",
+        "О нас": "About Us",
+        "Жизнь ITRUN": "Life ITRUN",
+        "Контакты": "Contacts",
+        "Вход в IT за 60 минут": "Free lesson!",
+        "Оставить заявку": "Submit a request",
+        "Навигация": "Navigation",
+        "Тамос": "Contact",
+        "Касби серталаби IT-ро аз худ кунед ва ба коркарди даромад оғоз намоед": "Master a high-demand IT profession and start earning an income.",
+        "Ҳамаи ҳуқуқҳо ҳифз шудаанд": "All rights reserved.",
+        "кӯчаи Сомонӣ 51А, Хуҷанд, Тоҷикистон": "51A Somoni Street, Khujand, Tajikistan",
+        "кӯчаи Айни 166, Малика Собирова 35, Душанбе, Тоҷикистон": "166 Ayni Street, 35 Malika Sobirova, Dushanbe, Tajikistan"
+    },
+    "main": {
+        "firstSection": {
+            "Таҳсилоти IT барои кӯдакон, наврасон, донишҷӯён ва калонсолон": "IT education for children, teenagers, students, and adults",
+            "Бо омӯзгорони ботаҷриба касбҳои рақамии серталабро аз худ намоед. Мо барномасозӣ, дизайн, зеҳни сунъӣ ва дигар самтҳои муосири IT-ро аз дарси аввал то пайдо кардани кори аввал дар соҳаи технология омӯзиш медиҳем": "Master in-demand digital professions with experienced instructors. We provide training in programming, design, artificial intelligence, and other modern IT fields—guiding you from your very first lesson all the way to landing your first job in the tech industry.",
+            "Ба дарси ройгон номнавис шудан": "Sign up for the free lesson",
+            "Посмотреть все курсы": "View all courses",
+            "1000+ студентов уже с нами": "Over 1,000 students are already with us.",
+            "95% трудоустройство наших выпускников": "+74% employment rate for our graduates",
+            "Опыт преподавания": "Teaching experience",
+            "Шумораи хатмкардагон": "Number of graduates",
+            "Дар ширкатҳои IT соҳиби кор шуданд": "Secured jobs at IT companies",
+            "Тайёранд моро тавсия диҳанд": "Willing to recommend us",
+            "Обучим": "We will train you",
+            "Направим": "Guide you",
+            "Трудоустроим": "Help you find a job",
+            "Обучайся востребованным навыкам с ведущими специалистами рынка": "Learn in-demand skills from leading industry experts.",
+            "Наши партнёры": "Our Partners",
+            "Мы работаем с ведущими IT-организациями, банками и международными фондами Таджикистана": "We work with leading IT organizations, banks, and international funds in Tajikistan."
+        }
+    }
+}

@@ -3,20 +3,16 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: ["main"]
-
-  # Позволяет запустить деплой вручную во вкладке Actions
   workflow_dispatch:
 
-# Установка прав для GitHub Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Разрешить только один одновременный деплой
 concurrency:
   group: "pages"
-  cancel-in-running: true
+  cancel-in-progress: true
 
 jobs:
   build:
@@ -32,9 +28,7 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
-        uses: sluggish/npm-install@v3 # или просто run: npm ci / npm install
-        with:
-          use-npm: true
+        run: npm install
 
       - name: Build
         run: npm run build

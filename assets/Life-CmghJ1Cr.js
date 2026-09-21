@@ -1,0 +1,1 @@
+import{t as e}from"./index-BViu-X0y.js";var t=e();function n(){return(0,t.jsx)(`div`,{children:`Life`})}export{n as default};

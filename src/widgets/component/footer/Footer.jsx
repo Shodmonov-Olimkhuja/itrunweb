@@ -111,19 +111,7 @@ export default function Footer() {
                                      {t("navbar.О нас")}
                                 </Link>
                             </li>
-                            
-
-                            <li>
-                                <Link
-                                    to="/life-itrun"
-                                    className="group flex items-center gap-2 text-sm text-slate-500 transition hover:text-[#ff9735] dark:text-slate-400"
-                                >
-                                    <span className="transition-transform group-hover:translate-x-1">
-                                        →
-                                    </span>
-                                    {t("navbar.Жизнь ITRUN")}
-                                </Link>
-                            </li>
+                        
 
                             <li>
                                 <Link

@@ -1,5 +1,6 @@
 import { lazy, Suspense } from "react";
 import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
+import ScrollToTop from "./scrollToTop/ScrollToTop";
 
 const Layout = lazy(() => import ("../../widgets/layout/Layout"))
 const MainPage = lazy(() => import("../../pages/main/Main"));
@@ -14,6 +15,7 @@ const RegisterPage = lazy(() => import("../../pages/register/Register"));
 export default function AppRouter() {
     return (
         <BrowserRouter>
+        <ScrollToTop/>
             <Suspense>
                 <Routes>
                     <Route element={<Layout />} >

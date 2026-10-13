@@ -1,60 +1,62 @@
 import { useState } from "react";
 import { Code2, Server, Smartphone, GraduationCap, Palette, Brain, Cpu, CheckCircle2 } from "lucide-react";
 import logo from "../../../../assets/logo.png";
-
-const directions = [
-  {
-    id: "frontend",
-    title: "Frontend",
-    subtitle: "Клиентская часть",
-    description: "Создание интерфейсов веб-сайтов и веб-приложений, с которыми взаимодействует пользователь.",
-    skills: ["HTML5 / CSS3", "JavaScript (ES6+)", "React.js / Next.js", "Tailwind CSS"],
-    icon: Code2,
-  },
-  {
-    id: "backend",
-    title: "Backend",
-    subtitle: "Серверная часть",
-    description: "Разработка логики работы приложений изнутри, работа с базами данных, API и серверами.",
-    skills: ["Node.js / Python", "PostgreSQL / Supabase", "RESTful API", "Git / Docker"],
-    icon: Server,
-  },
-  {
-    id: "mobile",
-    title: "Mobile",
-    subtitle: "Мобильные приложения",
-    description: "Создание кроссплатформенных и нативных приложений для смартфонов на iOS и Android.",
-    skills: ["React Native", "Flutter", "Swift / Kotlin", "Mobile UI/UX"],
-    icon: Smartphone,
-  },
-  {
-    id: "kids",
-    title: "Kids",
-    subtitle: "Для детей",
-    description: "Увлекательное погружение в мир IT, логику и основы программирования в игровом формате.",
-    skills: ["Scratch / Blockly", "Основы Python", "Создание игр", "Логика и алгоритмы"],
-    icon: GraduationCap,
-  },
-  {
-    id: "ai",
-    title: "AI & Data",
-    subtitle: "Искусственный интеллект",
-    description: "Изучение алгоритмов машинного обучения, работы с нейросетями и анализа данных.",
-    skills: ["Python для AI", "Machine Learning", "Prompt Engineering", "Работа с API нейросетей"],
-    icon: Brain,
-  },
-  {
-    id: "design",
-    title: "Design",
-    subtitle: "UI/UX Дизайн",
-    description: "Проектирование удобных пользовательских интерфейсов и создание современного визуального стиля.",
-    skills: ["Figma / FigJam", "UI/UX Методология", "Адаптивный дизайн", "Прототипирование"],
-    icon: Palette,
-  },
-];
+import { useTranslation } from "react-i18next";
 
 export default function TechMindMapLightSection() {
+  const { t } = useTranslation();
   const [activeId, setActiveId] = useState(null);
+
+  const directions = [
+    {
+      id: "frontend",
+      title: "Frontend",
+      subtitle: t("main.firstSection.Приложения"),
+      description: t("main.firstSection.Создание интерфейсов веб-сайтов и веб-приложений, с которыми взаимодействует пользователь"),
+      skills: ["HTML5 / CSS3", "JavaScript (ES6+)", "React.js / Next.js", "Tailwind CSS"],
+      icon: Code2,
+    },
+    {
+      id: "backend",
+      title: "Backend",
+      subtitle: t("main.firstSection.Серверная часть"),
+      description: t("main.firstSection.Разработка логики работы приложений изнутри, работа с базами данных, API и серверами"),
+      skills: ["Node.js / Python", "PostgreSQL / Supabase", "RESTful API", "Git / Docker"],
+      icon: Server,
+    },
+    {
+      id: "mobile",
+      title: "Mobile",
+      subtitle: t("main.firstSection.Мобильные приложения"),
+      description: t("main.firstSection.Создание кроссплатформенных и нативных приложений для смартфонов на iOS и Android"),
+      skills: ["React Native", "Flutter", "Swift / Kotlin", "Mobile UI/UX"],
+      icon: Smartphone,
+    },
+    {
+      id: "kids",
+      title: "Kids",
+      subtitle: t("main.firstSection.Для детей"),
+      description: t("main.firstSection.Увлекательное погружение в мир IT, логику и основы программирования в игровом формате"),
+      skills: ["Scratch / Blockly", "Основы Python", "Создание игр", "Логика и алгоритмы"],
+      icon: GraduationCap,
+    },
+    {
+      id: "ai",
+      title: "AI & Data",
+      subtitle: t("main.firstSection.Искусственный интеллект"),
+      description: t("main.firstSection.Изучение алгоритмов машинного обучения, работы с нейросетями и анализа данных"),
+      skills: ["Python для AI", "Machine Learning", "Prompt Engineering", "Работа с API нейросетей"],
+      icon: Brain,
+    },
+    {
+      id: "design",
+      title: "Design",
+      subtitle: t("main.firstSection.UI/UX Дизайн"),
+      description: t("main.firstSection.Проектирование удобных пользовательских интерфейсов и создание современного визуального стиля"),
+      skills: ["Figma / FigJam", "UI/UX Методология", "Адаптивный дизайн", "Прототипирование"],
+      icon: Palette,
+    },
+  ];
 
   const activeData = directions.find((d) => d.id === activeId);
 
@@ -65,45 +67,34 @@ export default function TechMindMapLightSection() {
   };
 
   const getLineClass = (id) => {
-    return `transition-all duration-300 fill-none ${
-      activeId === id 
-        ? "stroke-orange-500 stroke-[3] opacity-100" 
-        : activeId !== null 
-        ? "stroke-slate-200 stroke-[1] opacity-20" 
-        : "stroke-slate-300 stroke-[1.5] opacity-70"
-    }`;
+    return `transition-all duration-300 fill-none ${activeId === id
+        ? "stroke-orange-500 stroke-[3] opacity-100"
+        : activeId !== null
+          ? "stroke-slate-200 stroke-[1] opacity-20"
+          : "stroke-slate-300 stroke-[1.5] opacity-70"
+      }`;
   };
 
   return (
     <section className="relative overflow-hidden flex items-center justify-center py-16">
-      
       <div className="relative max-w-6xl w-full mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         <div className="text-center mb-16">
-          <span className="px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-orange-500/10 text-orange-600 border border-orange-500/20">
-            Наши направления
-          </span>
           <h2 className="mt-4 text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-            Выберите свой путь в IT
+            {t("main.firstSection.Выберите свой путь в IT")}
           </h2>
           <p className="mt-2 text-base text-slate-600 max-w-xl mx-auto">
-            Наведите курсор на любое направление, чтобы изучить подробности и технологии.
+            {t("main.firstSection.Наведите курсор на любое направление, чтобы изучить подробности и технологии")}
           </p>
         </div>
 
         <div className="hidden lg:relative lg:flex lg:items-center lg:justify-center lg:min-h-[580px]">
-          
           <svg className="absolute inset-0 w-full h-full pointer-events-none overflow-visible" viewBox="0 0 1000 580">
             <path d="M 500 290 Q 320 120 160 110" className={getLineClass("backend")} />
-
             <path d="M 500 290 Q 300 290 110 290" className={getLineClass("frontend")} />
-
             <path d="M 500 290 Q 320 450 160 470" className={getLineClass("design")} />
-
             <path d="M 500 290 Q 680 120 840 110" className={getLineClass("mobile")} />
-
             <path d="M 500 290 Q 700 290 890 290" className={getLineClass("kids")} />
-
             <path d="M 500 290 Q 680 450 840 470" className={getLineClass("ai")} />
           </svg>
 
@@ -122,7 +113,7 @@ export default function TechMindMapLightSection() {
                 <span className="text-xs font-semibold text-orange-600 uppercase tracking-wider">{activeData.subtitle}</span>
                 <h3 className="text-xl font-bold text-slate-900 mt-1">{activeData.title}</h3>
                 <p className="text-xs text-slate-600 mt-2 leading-relaxed">{activeData.description}</p>
-                
+
                 <div className="mt-4 pt-3 border-t border-slate-100 text-left">
                   <p className="text-xs font-semibold text-slate-900 mb-2">Что нужно изучить:</p>
                   <div className="grid grid-cols-2 gap-1.5">
@@ -136,13 +127,11 @@ export default function TechMindMapLightSection() {
                 </div>
               </div>
             ) : (
-              <div className="opacity-0 transition-opacity duration-300">
-              </div>
+              <div className="opacity-0 transition-opacity duration-300" />
             )}
           </div>
 
-          
-          <div 
+          <div
             onMouseEnter={() => setActiveId("backend")}
             onMouseLeave={() => setActiveId(null)}
             className={`absolute top-[10%] left-[6%] cursor-pointer transition-all duration-300 ${getCardOpacityClass("backend")}`}
@@ -153,12 +142,12 @@ export default function TechMindMapLightSection() {
               </div>
               <div className="overflow-hidden">
                 <h3 className="text-slate-900 font-semibold text-base truncate">Backend</h3>
-                <p className="text-xs text-slate-500 truncate">Серверная часть</p>
+                <p className="text-xs text-slate-500 truncate">{t("main.firstSection.Серверная часть")}</p>
               </div>
             </div>
           </div>
 
-          <div 
+          <div
             onMouseEnter={() => setActiveId("frontend")}
             onMouseLeave={() => setActiveId(null)}
             className={`absolute top-[45%] left-[2%] cursor-pointer transition-all duration-300 ${getCardOpacityClass("frontend")}`}
@@ -169,12 +158,12 @@ export default function TechMindMapLightSection() {
               </div>
               <div className="overflow-hidden">
                 <h3 className="text-slate-900 font-semibold text-base truncate">Frontend</h3>
-                <p className="text-xs text-slate-500 truncate">Клиентская часть</p>
+                <p className="text-xs text-slate-500 truncate">{t("main.firstSection.Приложения")}</p>
               </div>
             </div>
           </div>
 
-          <div 
+          <div
             onMouseEnter={() => setActiveId("design")}
             onMouseLeave={() => setActiveId(null)}
             className={`absolute bottom-[10%] left-[6%] cursor-pointer transition-all duration-300 ${getCardOpacityClass("design")}`}
@@ -185,12 +174,12 @@ export default function TechMindMapLightSection() {
               </div>
               <div className="overflow-hidden">
                 <h3 className="text-slate-900 font-semibold text-base truncate">Design</h3>
-                <p className="text-xs text-slate-500 truncate">UI/UX и Графика</p>
+                <p className="text-xs text-slate-500 truncate">{t("main.firstSection.UI/UX Дизайн")}</p>
               </div>
             </div>
           </div>
 
-          <div 
+          <div
             onMouseEnter={() => setActiveId("mobile")}
             onMouseLeave={() => setActiveId(null)}
             className={`absolute top-[10%] right-[6%] cursor-pointer transition-all duration-300 ${getCardOpacityClass("mobile")}`}
@@ -198,7 +187,7 @@ export default function TechMindMapLightSection() {
             <div className="flex items-center gap-4 bg-white border border-slate-200 px-5 py-3.5 rounded-2xl shadow-lg w-56">
               <div className="order-2 text-left overflow-hidden">
                 <h3 className="text-slate-900 font-semibold text-base truncate">Mobile</h3>
-                <p className="text-xs text-slate-500 truncate">Приложения</p>
+                <p className="text-xs text-slate-500 truncate">{t("main.firstSection.Мобильные приложения")}</p>
               </div>
               <div className="order-1 w-12 h-12 rounded-xl bg-orange-500/10 text-orange-600 flex items-center justify-center flex-shrink-0">
                 <Smartphone size={22} />
@@ -206,7 +195,7 @@ export default function TechMindMapLightSection() {
             </div>
           </div>
 
-          <div 
+          <div
             onMouseEnter={() => setActiveId("kids")}
             onMouseLeave={() => setActiveId(null)}
             className={`absolute top-[45%] right-[2%] cursor-pointer transition-all duration-300 ${getCardOpacityClass("kids")}`}
@@ -214,7 +203,7 @@ export default function TechMindMapLightSection() {
             <div className="flex items-center gap-4 bg-white border border-slate-200 px-5 py-3.5 rounded-2xl shadow-lg w-56">
               <div className="order-2 text-left overflow-hidden">
                 <h3 className="text-slate-900 font-semibold text-base truncate">Kids</h3>
-                <p className="text-xs text-slate-500 truncate">Для детей</p>
+                <p className="text-xs text-slate-500 truncate">{t("main.firstSection.Для детей")}</p>
               </div>
               <div className="order-1 w-12 h-12 rounded-xl bg-orange-500/10 text-orange-600 flex items-center justify-center flex-shrink-0">
                 <GraduationCap size={22} />
@@ -222,7 +211,7 @@ export default function TechMindMapLightSection() {
             </div>
           </div>
 
-          <div 
+          <div
             onMouseEnter={() => setActiveId("ai")}
             onMouseLeave={() => setActiveId(null)}
             className={`absolute bottom-[10%] right-[6%] cursor-pointer transition-all duration-300 ${getCardOpacityClass("ai")}`}
@@ -230,14 +219,13 @@ export default function TechMindMapLightSection() {
             <div className="flex items-center gap-4 bg-white border border-slate-200 px-5 py-3.5 rounded-2xl shadow-lg w-56">
               <div className="order-2 text-left overflow-hidden">
                 <h3 className="text-slate-900 font-semibold text-base truncate">AI & Data</h3>
-                <p className="text-xs text-slate-500 truncate">Нейросети</p>
+                <p className="text-xs text-slate-500 truncate">{t("main.firstSection.Искусственный интеллект")}</p>
               </div>
               <div className="order-1 w-12 h-12 rounded-xl bg-orange-500/10 text-orange-600 flex items-center justify-center flex-shrink-0">
                 <Brain size={22} />
               </div>
             </div>
           </div>
-
         </div>
 
         <div className="lg:hidden flex flex-col items-center gap-8">
@@ -251,7 +239,7 @@ export default function TechMindMapLightSection() {
             {directions.map((item) => {
               const IconComponent = item.icon;
               return (
-                <div 
+                <div
                   key={item.id}
                   className="bg-white border border-slate-200 p-5 rounded-2xl shadow-sm hover:border-orange-500/50 transition-all duration-300"
                 >
@@ -280,6 +268,7 @@ export default function TechMindMapLightSection() {
             })}
           </div>
         </div>
+
       </div>
     </section>
   );

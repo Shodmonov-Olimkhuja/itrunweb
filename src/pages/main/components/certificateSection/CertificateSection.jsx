@@ -1,6 +1,7 @@
 import { useState, useRef } from "react";
-import { CheckCircle2, Briefcase, ArrowRight, Award } from "lucide-react";
+import { CheckCircle2, Briefcase } from "lucide-react";
 import certificateImg from "../../../../assets/sql.png";
+import { useTranslation } from "react-i18next";
 
 export default function CertificateSection() {
     const cardRef = useRef(null);
@@ -8,17 +9,18 @@ export default function CertificateSection() {
     const [rotateY, setRotateY] = useState(0);
     const [isHovered, setIsHovered] = useState(false);
 
-    // Обработчик движения мыши для создания 3D-наклона
+
+
+    const { t } = useTranslation()
+
     const handleMouseMove = (e) => {
         if (!cardRef.current) return;
         const rect = cardRef.current.getBoundingClientRect();
-        const x = e.clientX - rect.left; // координата X внутри карточки
-        const y = e.clientY - rect.top;  // координата Y внутри карточки
-        
+        const x = e.clientX - rect.left; 
+        const y = e.clientY - rect.top;  
         const centerX = rect.width / 2;
         const centerY = rect.height / 2;
 
-        // Вычисляем углы наклона (ограничиваем до 12 градусов для плавности)
         const rX = ((y - centerY) / centerY) * -10;
         const rY = ((x - centerX) / centerX) * 10;
 
@@ -35,21 +37,18 @@ export default function CertificateSection() {
         setRotateX(0);
         setRotateY(0);
     };
-
     return (
         <section className="relative overflow-hidden bg-white flex items-center justify-center">
             <div className="relative max-w-6xl w-full mx-auto px-4 sm:px-6 lg:px-8">
-
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-
                     <div className="lg:col-span-7 flex flex-col items-start text-left">
 
                         <h2 className="text-2xl sm:text-4xl lg:text-4xl font-black tracking-tight leading-[1.1]">
-                            Сертификате, ки дарҳоро мекушояд
+                            {t("main.firstSection.Сертификате, ки дарҳоро мекушояд")}
                         </h2>
 
                         <p className="mt-4 text-slate-600 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0 font-normal">
-                            Тасдиқ мекунад, ки шумо курсро хатм кардед ва барои ёфтани аввалин кор дар IT кӯмак хоҳад кард.
+                            {t("main.firstSection.Тасдиқ мекунад, ки шумо курсро хатм кардед ва барои ёфтани аввалин кор дар IT кӯмак хоҳад кард")}
                         </p>
 
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full mt-8 max-w-lg">
@@ -59,8 +58,8 @@ export default function CertificateSection() {
                                     <CheckCircle2 size={20} />
                                 </div>
                                 <div>
-                                    <h4 className="text-xs font-bold text-slate-900">Тасдиқи дониш</h4>
-                                    <p className="text-[11px] text-slate-500">Официальный документ</p>
+                                    <h4 className="text-xs font-bold text-slate-900">  {t("main.firstSection.Тасдиқи дониш")}  </h4>
+                                    <p className="text-[11px] text-slate-500">{t("main.firstSection.Официальный документ")}</p>
                                 </div>
                             </div>
 
@@ -69,17 +68,10 @@ export default function CertificateSection() {
                                     <Briefcase size={20} />
                                 </div>
                                 <div>
-                                    <h4 className="text-xs font-bold text-slate-900">Барои портфолио</h4>
-                                    <p className="text-[11px] text-slate-500">Для работодателей</p>
+                                    <h4 className="text-xs font-bold text-slate-900">{t("main.firstSection.Барои портфолио")}</h4>
+                                    <p className="text-[11px] text-slate-500">{t("main.firstSection.Для работодателей")}</p>
                                 </div>
                             </div>
-                        </div>
-
-                        <div className="mt-8">
-                            <button className="inline-flex items-center gap-3 bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-3.5 rounded-xl shadow-lg shadow-orange-500/25 transition-all duration-300 hover:scale-105 cursor-pointer">
-                                <span>Намунаи сертификат</span>
-                                <ArrowRight size={18} />
-                            </button>
                         </div>
                     </div>
 
@@ -104,7 +96,7 @@ export default function CertificateSection() {
                             >
                                 <div className="absolute -top-6 right-10 w-32 h-12 border-t-2 border-r-2 border-slate-300 rounded-tr-full pointer-events-none" />
 
-                                <div className="relative rounded-2xl overflow-hidden shadow-md border border-slate-100">
+                                <div className="relative  overflow-hidden ">
                                     <img 
                                         src={certificateImg} 
                                         alt="IT-RUN Certificate" 
@@ -117,8 +109,8 @@ export default function CertificateSection() {
                                         <CheckCircle2 size={15} />
                                     </div>
                                     <div>
-                                        <p className="text-[11px] font-bold text-slate-900">IT-RUN</p>
-                                        <p className="text-[9px] text-slate-500">Official Certificate</p>
+                                        <p className="text-[11px] font-bold text-slate-900">IT RUN</p>
+                                        <p className="text-[9px] text-slate-500">{t("main.firstSection.Официальный документ")}</p>
                                     </div>
                                 </div>
                             </div>

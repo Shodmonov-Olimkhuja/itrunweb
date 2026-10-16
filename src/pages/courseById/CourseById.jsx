@@ -1,77 +1,38 @@
 import { useTranslation } from 'react-i18next';
 import { useParams, Link } from 'react-router-dom';
-import sql from "../../assets/sql.png"
 
 export default function CourseById() {
     const { id } = useParams();
     const { t } = useTranslation()
 
-
-    // const course = {
-    //     id: 107,
-    //     title: 'Frontend (HTML & CSS)',
-    //     duration: '4 месяца',
-    //     level: 'Beginner',
-    //     levelColor: 'text-emerald-400 bg-emerald-500/10 border-emerald-500/20',
-    //     tags: ['HTML5', 'CSS3', 'Flexbox', 'Grid', 'Responsive'],
-    //     description: 'Стань разработчиком современных веб-приложений с нуля',
-    //     subTitle: 'Освойте архитектуру интерфейсов и адаптивную верстку',
-    //     information: [
-    //         { id: 1, label: 'Уровень', value: 'Beginner', icon: 'fa-solid fa-chart-line' },
-    //         { id: 2, label: 'Длительность', value: '4 месяца', icon: 'fa-solid fa-stopwatch' },
-    //         { id: 3, label: 'Занятность', value: '2 раза по 2ч / нед', icon: 'fa-solid fa-calendar-check' },
-    //         { id: 4, label: 'Формат', value: 'Худжанд (Офлайн)', icon: 'fa-solid fa-laptop' },
-    //     ],
-    //     why: 'Идеальный фундамент для старта в веб-разработке и создания коммерческих проектов.',
-    //     metodichka: [
-    //         'Основы HTML и семантическая разметка',
-    //         'Современный CSS и стилевое оформление',
-    //         'Блочная модель и позиционирование',
-    //         'Flexbox и CSS Grid (Продвинутая верстка)',
-    //         'Адаптивный дизайн для мобильных устройств',
-    //         'CSS-анимации, переходы и трансформации',
-    //         'Работа с формами и валидация',
-    //         'Инструменты разработчика (DevTools)',
-    //         'Контроль версий: Git и GitHub',
-    //         'Итоговый проект и публикация в сети',
-    //     ],
-    //     technologies: [
-    //         { id: 1, title: 'HTML5', icon: 'fa-brands fa-html5 text-orange-500' },
-    //         { id: 2, title: 'CSS3', icon: 'fa-brands fa-css3-alt text-blue-500' },
-    //         { id: 3, title: 'Flexbox & Grid', icon: 'fa-solid fa-table-cells text-[#12304A]' },
-    //         { id: 4, title: 'Git & GitHub', icon: 'fa-brands fa-git-alt text-red-500' },
-    //         { id: 5, title: 'VS Code', icon: 'fa-brands fa-microsoft text-sky-400' },
-    //     ],
-    // };
-
     const courses = [
         {
             id: 1,
             title: 'Frontend (HTML && CSS)',
-            duration: '4 месяцев',
+            duration: t("information.4 месяцев"),
             level: 'Beginner',
             levelColor: 'text-emerald-400',
             tags: ['HTML', 'CSS'],
-            description: t("courseById.Получи фундаментальные навыки frontend-разработки: от структуры HTML-страниц до адаптивного дизайна с помощью CSS. Создай собственные проекты и подготовься к изучению JavaScript"),
+            description: t("courseById.Получи фундаментальные навыки frontend-разработки от структуры HTML-страниц до адаптивного дизайна с помощью CSS. Создай собственные проекты и подготовься к изучению JavaScript"),
             subTitle: '1',
             information: [
-                { id: 1, classIcon: 'fa-solid fa-chart-line', info: 'Уровень', infor: 'Beginer' },
+                { id: 1, classIcon: 'fa-solid fa-chart-line', info: t("information.Уровень"), infor: 'Beginer' },
                 {
                     id: 2,
                     classIcon: 'fa-solid fa-stopwatch',
-                    info: 'Длительность',
-                    infor: '4 месяцев',
+                    info: t("information.Длительность"),
+                    infor: t("information.4 месяцев"),
                 },
                 {
                     id: 3,
                     classIcon: 'fa-solid fa-calendar-check',
-                    info: 'Занятность',
-                    infor: '2 раза по 2ч/нед',
+                    info: t("information.Занятность"),
+                    infor: t("information.2 раза по 2ч/нед"),
                 },
                 {
                     id: 4,
                     classIcon: 'fa-solid fa-laptop',
-                    info: 'Формат',
+                    info: t("information.Формат"),
                     infor: 'Офлайн',
                 },
             ],
@@ -116,11 +77,11 @@ export default function CourseById() {
             cert: '/certificate/jsbg.png',
             id: 2,
             title: 'JavaScript',
-            duration: '4 месяцев',
+            duration: t("information.4 месяцев"),
             level: 'Junior',
             levelColor: 'text-yellow-400',
             tags: ['JavaScript', 'ES6+', 'DOM'],
-            description: 'Изучи JavaScript с нуля: от переменных и циклов до работы с DOM, API и асинхронным кодом. Создавай интерактивные приложения и подготовься к изучению React.',
+            description: t("courseById.Изучи JavaScript с нуля от переменных и циклов до работы с DOM, API и асинхронным кодом. Создавай интерактивные приложения и подготовься к изучению React"),
             subTitle: '3',
             icon: 'fa-brands fa-js',
             iconBg: 'bg-yellow-500/20',
@@ -135,43 +96,43 @@ export default function CourseById() {
                 {
                     id: 1,
                     classIcon: 'fa-solid fa-chart-line',
-                    info: 'Уровень',
+                    info: t("information.Уровень"),
                     infor: 'Junior',
                 },
                 {
                     id: 2,
                     classIcon: 'fa-solid fa-stopwatch',
-                    info: 'Длительность',
-                    infor: '4 месяцев',
+                    info: t("information.Длительность"),
+                    infor: t("information.4 месяцев"),
                 },
                 {
                     id: 3,
                     classIcon: 'fa-solid fa-calendar-check',
-                    info: 'Занятность',
-                    infor: '2 раза по 2ч/нед',
+                    info: t("information.Занятность"),
+                    infor: t("information.2 раза по 2ч/нед"),
                 },
                 {
                     id: 4,
                     classIcon: 'fa-solid fa-laptop',
-                    info: 'Формат',
+                    info: t("information.Формат"),
                     infor: 'Офлайн',
                 },
             ],
 
-            why: 'JavaScript — один из ключевых языков веб-разработки, который позволяет превращать обычные сайты в интерактивные и функциональные приложения.',
+            why: t("courseById.JavaScript — один из ключевых языков веб-разработки, который позволяет превращать обычные сайты в интерактивные и функциональные приложения"),
 
             metodichka: [
-                'Основы JavaScript',
-                'Переменные и типы данных',
-                'Условия и циклы',
-                'Функции',
-                'Массивы и объекты',
-                'DOM и события',
-                'Асинхронность',
-                'Fetch API',
-                'ES6+',
-                'Модули',
-                'Практические проекты',
+                t("courseById.Основы JavaScript"),
+                t("courseById.Переменные и типы данных"),
+                t("courseById.Условия и циклы"),
+                t("courseById.Функции"),
+                t("courseById.Массивы и объекты"),
+                t("courseById.DOM и события"),
+                t("courseById.Асинхронность"),
+                t("courseById.Fetch API"),
+                t("courseById.ES6+"),
+                t("courseById.Модули"),
+                t("courseById.Практические проекты"),
             ],
 
             technologies: [
@@ -211,11 +172,11 @@ export default function CourseById() {
         {
             id: 3,
             title: 'React Developer',
-            duration: '4 месяцев',
+            duration: t("information.4 месяцев"),
             level: 'Middle',
             levelColor: 'text-amber-400',
             tags: ['JavaScript', 'React', 'Redux', 'Redux/toolkit', 'API'],
-            description: 'Изучи React и научись создавать быстрые, интерактивные и масштабируемые интерфейсы. Работай с компонентами, управляй состоянием приложения и разрабатывай реальные проекты от идеи до готового продукта.',
+            description: t("courseById.Изучи React и научись создавать быстрые, интерактивные и масштабируемые интерфейсы. Работай с компонентами, управляй состоянием приложения и разрабатывай реальные проекты от идеи до готового продукта"),
             subTitle: '5',
 
             icon: 'fa-brands fa-react',
@@ -234,46 +195,46 @@ export default function CourseById() {
                 {
                     id: 1,
                     classIcon: 'fa-solid fa-chart-line',
-                    info: 'Уровень',
+                    info: t("information.Уровень"),
                     infor: 'Middle',
                 },
                 {
                     id: 2,
                     classIcon: 'fa-solid fa-stopwatch',
-                    info: 'Длительность',
-                    infor: '4 месяцев',
+                    info: t("information.Длительность"),
+                    infor: t("information.4 месяцев"),
                 },
                 {
                     id: 3,
                     classIcon: 'fa-solid fa-calendar-check',
-                    info: 'Занятность',
-                    infor: '2 раза по 2ч/нед',
+                    info: t("information.Занятность"),
+                    infor: t("information.2 раза по 2ч/нед"),
                 },
                 {
                     id: 4,
                     classIcon: 'fa-solid fa-laptop',
-                    info: 'Формат',
+                    info: t("information.Формат"),
                     infor: 'Офлайн',
                 },
             ],
 
-            why: 'React — популярная JavaScript-библиотека для создания пользовательских интерфейсов. Она помогает разрабатывать современные веб-приложения, разделять интерфейс на переиспользуемые компоненты и эффективно управлять данными.',
+            why: t("courseById.React — популярная JavaScript-библиотека для создания пользовательских интерфейсов. Она помогает разрабатывать современные веб-приложения, разделять интерфейс на переиспользуемые компоненты и эффективно управлять данными"),
 
             metodichka: [
-                'Основы React',
-                'JSX',
-                'Компоненты',
-                'Props и State',
-                'useState',
-                'useEffect',
-                'React Router',
-                'Работа с API',
-                'Axios',
-                'Redux Toolkit',
-                'Firebase',
-                'Авторизация',
-                'Оптимизация приложений',
-                'Деплой проекта',
+                t("courseById.Основы React"),
+                t("courseById.JSX"),
+                t("courseById.Компоненты"),
+                t("courseById.Props и State"),
+                t("courseById.useState"),
+                t("courseById.useEffect"),
+                t("courseById.React Router"),
+                t("courseById.Работа с API"),
+                t("courseById.Axios"),
+                t("courseById.Redux Toolkit"),
+                t("courseById.Firebase"),
+                t("courseById.Авторизация"),
+                t("courseById.Оптимизация приложений"),
+                t("courseById.Деплой проекта"),
             ],
 
             technologies: [
@@ -320,12 +281,12 @@ export default function CourseById() {
             cert: '/certificate/html&cssbg.png',
             id: 4,
             title: 'UI/UX Designer',
-            duration: '4 месяцев',
+            duration: t("information.3 месяцев"),
             level: 'Beginner',
             levelColor: 'text-emerald-400',
             tags: ['Figma', 'UI Design', 'UX', 'Prototyping'],
 
-            description: 'Изучи основы UX/UI-дизайна, научись проектировать пользовательский опыт и создавать современные интерфейсы сайтов и мобильных приложений. Превращай идеи в стильные и удобные цифровые продукты.',
+            description: t("courseById.Изучи основы UX/UI-дизайна, научись проектировать пользовательский опыт и создавать современные интерфейсы сайтов и мобильных приложений. Превращай идеи в стильные и удобные цифровые продукты"),
 
             subTitle: '7',
 
@@ -344,45 +305,45 @@ export default function CourseById() {
                 {
                     id: 1,
                     classIcon: 'fa-solid fa-chart-line',
-                    info: 'Уровень',
+                    info: t("information.Уровень"),
                     infor: 'Beginner',
                 },
                 {
                     id: 2,
                     classIcon: 'fa-solid fa-stopwatch',
-                    info: 'Длительность',
-                    infor: '4 месяцев',
+                    info: t("information.Длительность"),
+                    infor: t("information.3 месяцев"),
                 },
                 {
                     id: 3,
                     classIcon: 'fa-solid fa-calendar-check',
-                    info: 'Занятность',
-                    infor: '2 раза по 2ч/нед',
+                    info: t("information.Занятность"),
+                    infor: t("information.2 раза по 2ч/нед"),
                 },
                 {
                     id: 4,
                     classIcon: 'fa-solid fa-laptop',
-                    info: 'Формат',
+                    info: t("information.Формат"),
                     infor: 'Офлайн',
                 },
             ],
 
-            why: 'UX/UI-дизайн объединяет удобство использования и визуальную привлекательность цифровых продуктов. Он помогает создавать сайты и приложения, которыми людям приятно и легко пользоваться.',
+            why: t("courseById.UX/UI-дизайн объединяет удобство использования и визуальную привлекательность цифровых продуктов. Он помогает создавать сайты и приложения, которыми людям приятно и легко пользоваться"),
 
             metodichka: [
-                'Введение в UI/UX',
-                'Основы композиции',
-                'Цвет и типографика',
-                'UX-исследования',
-                'Пользовательские сценарии',
-                'Wireframes',
-                'Прототипирование',
-                'Работа в Figma',
-                'Создание дизайн-систем',
-                'Мобильный дизайн',
-                'Адаптивный дизайн',
-                'Подготовка макетов для разработки',
-                'Портфолио дизайнера',
+                t("courseById.Введение в UI/UX"),
+                t("courseById.Основы композиции"),
+                t("courseById.Цвет и типографика"),
+                t("courseById.UX-исследования"),
+                t("courseById.Пользовательские сценарии"),
+                t("courseById.Wireframes"),
+                t("courseById.Прототипирование"),
+                t("courseById.Работа в Figma"),
+                t("courseById.Создание дизайн-систем"),
+                t("courseById.Мобильный дизайн"),
+                t("courseById.Адаптивный дизайн"),
+                t("courseById.Подготовка макетов для разработки"),
+                t("courseById.Портфолио дизайнера"),
             ],
 
             technologies: [
@@ -429,13 +390,13 @@ export default function CourseById() {
             cert: '/certificate/pythonbg.png',
             id: 5,
             title: 'Python Developer',
-            duration: '4 месяцев',
+            duration: t("information.4 месяцев"),
             level: 'Beginner',
             levelColor: 'text-emerald-400',
 
             tags: ['Python', 'Telegram bot', 'SQLite'],
 
-            description: 'Python — отличный первый язык программирования, который помогает развить алгоритмическое мышление и подготовиться к дальнейшему изучению Web-разработки, AI и Data Science.',
+            description: t("courseById.Python — отличный первый язык программирования, который помогает развить алгоритмическое мышление и подготовиться к дальнейшему изучению Web-разработки, AI и Data Science"),
 
             subTitle: '9',
 
@@ -454,43 +415,43 @@ export default function CourseById() {
                 {
                     id: 1,
                     classIcon: 'fa-solid fa-chart-line',
-                    info: 'Уровень',
+                    info: t("information.Уровень"),
                     infor: 'Beginner',
                 },
                 {
                     id: 2,
                     classIcon: 'fa-solid fa-stopwatch',
-                    info: 'Длительность',
-                    infor: '4 месяцев',
+                    info: t("information.Длительность"),
+                    infor: t("information.4 месяцев"),
                 },
                 {
                     id: 3,
                     classIcon: 'fa-solid fa-calendar-check',
-                    info: 'Занятность',
-                    infor: '2 раза по 2ч/нед',
+                    info: t("information.Занятность"),
+                    infor: t("information.2 раза по 2ч/нед"),
                 },
                 {
                     id: 4,
                     classIcon: 'fa-solid fa-laptop',
-                    info: 'Формат',
+                    info: t("information.Формат"),
                     infor: 'Офлайн',
                 },
             ],
 
-            why: 'Простой для старта — понятный синтаксис позволяет быстро освоить основы программирования.',
+            why: t("courseById.Простой для старта — понятный синтаксис позволяет быстро освоить основы программирования"),
 
             metodichka: [
-                'Введение в Python',
-                'Переменные и типы данных',
-                'Условия и циклы',
-                'Функции',
-                'Списки и словари',
-                'Работа с файлами',
-                'Модули и пакеты',
-                'Обработка ошибок',
-                'SQLite и базы данных',
-                'Создание REST API',
-                'Практические проекты',
+                t("courseById.Введение в Python"),
+                t("courseById.Переменные и типы данных"),
+                t("courseById.Условия и циклы"),
+                t("courseById.Функции"),
+                t("courseById.Списки и словари"),
+                t("courseById.Работа с файлами"),
+                t("courseById.Модули и пакеты"),
+                t("courseById.Обработка ошибок"),
+                t("courseById.SQLite и базы данных"),
+                t("courseById.Создание REST API"),
+                t("courseById.Практические проекты"),
             ],
 
             technologies: [
@@ -531,13 +492,13 @@ export default function CourseById() {
             cert: '/cert2-no-bg-preview (carve.photos).png',
             id: 6,
             title: 'Mobile Developer',
-            duration: '4 месяцев',
+            duration: t("information.4 месяцев"),
             level: 'Middle',
             levelColor: 'text-amber-400',
 
             tags: ['Flutter', 'Dart', 'Firebase'],
 
-            description: 'Создавай современные мобильные приложения для Android с помощью Kotlin.',
+            description: t("courseById.Создавай современные мобильные приложения для Android с помощью Kotlin"),
 
             subTitle: '12',
 
@@ -556,46 +517,46 @@ export default function CourseById() {
                 {
                     id: 1,
                     classIcon: 'fa-solid fa-chart-line',
-                    info: 'Уровень',
+                    info: t("information.Уровень"),
                     infor: 'Middle',
                 },
                 {
                     id: 2,
                     classIcon: 'fa-solid fa-stopwatch',
-                    info: 'Длительность',
-                    infor: '4 месяцев',
+                    info: t("information.Длительность"),
+                    infor: t("information.4 месяцев"),
                 },
                 {
                     id: 3,
                     classIcon: 'fa-solid fa-calendar-check',
-                    info: 'Занятность',
-                    infor: '2 раза по 2ч/нед',
+                    info: t("information.Занятность"),
+                    infor: t("information.2 раза по 2ч/нед"),
                 },
                 {
                     id: 4,
                     classIcon: 'fa-solid fa-laptop',
-                    info: 'Формат',
+                    info: t("information.Формат"),
                     infor: 'Офлайн',
                 },
             ],
 
-            why: 'Kotlin — современный язык разработки Android-приложений, который позволяет создавать быстрые, удобные и масштабируемые мобильные приложения.',
+            why: t("courseById.Kotlin — современный язык разработки Android-приложений, который позволяет создавать быстрые, удобные и масштабируемые мобильные приложения"),
 
             metodichka: [
-                'Введение в Flutter',
-                'Основы Dart',
-                'Виджеты Flutter',
-                'Навигация между экранами',
-                'Управление состоянием',
-                'Работа с API',
-                'Firebase Authentication',
-                'Cloud Firestore',
-                'Хранение данных',
-                'Push-уведомления',
-                'Архитектура приложений',
-                'Оптимизация производительности',
-                'Публикация в Play Market',
-                'Публикация в App Store',
+                t("courseById.Введение в Flutter"),
+                t("courseById.Основы Dart"),
+                t("courseById.Виджеты Flutter"),
+                t("courseById.Навигация между экранами"),
+                t("courseById.Управление состоянием"),
+                t("courseById.Работа с API"),
+                t("courseById.Firebase Authentication"),
+                t("courseById.Cloud Firestore"),
+                t("courseById.Хранение данных"),
+                t("courseById.Push-уведомления"),
+                t("courseById.Архитектура приложений"),
+                t("courseById.Оптимизация производительности"),
+                t("courseById.Публикация в Play Market"),
+                t("courseById.Публикация в App Store"),
             ],
 
             technologies: [
@@ -654,13 +615,13 @@ export default function CourseById() {
             cert: '/certificate/djangobg.png',
             id: 7,
             title: 'Python Django Developer',
-            duration: '4 месяцев',
+            duration: t("information.4 месяцев"),
             level: 'Middle',
             levelColor: 'text-amber-400',
 
             tags: ['Python', 'Django', 'PostgreSQL', 'REST API'],
 
-            description: 'Создавай мощные веб-приложения и серверную часть современных сайтов.',
+            description: t("courseById.Создавай мощные веб-приложения и серверную часть современных сайтов"),
 
             subTitle: '14',
 
@@ -679,49 +640,49 @@ export default function CourseById() {
                 {
                     id: 1,
                     classIcon: 'fa-solid fa-chart-line',
-                    info: 'Уровень',
+                    info: t("information.Уровень"),
                     infor: 'Middle',
                 },
                 {
                     id: 2,
                     classIcon: 'fa-solid fa-stopwatch',
-                    info: 'Длительность',
-                    infor: '4 месяцев',
+                    info: t("information.Длительность"),
+                    infor: t("information.4 месяцев"),
                 },
                 {
                     id: 3,
                     classIcon: 'fa-solid fa-calendar-check',
-                    info: 'Занятность',
-                    infor: '2 раза по 2ч/нед',
+                    info: t("information.Занятность"),
+                    infor: t("information.2 раза по 2ч/нед"),
                 },
                 {
                     id: 4,
                     classIcon: 'fa-solid fa-laptop',
-                    info: 'Формат',
+                    info: t("information.Формат"),
                     infor: 'Офлайн',
                 },
             ],
 
-            why: 'Python + Django — практичный стек для backend-разработки, который позволяет создавать полноценные веб-сервисы, API, CRM и другие современные приложения.',
+            why: t("courseById.Python + Django — практичный стек для backend-разработки, который позволяет создавать полноценные веб-сервисы, API, CRM и другие современные приложения"),
 
             metodichka: [
-                'Основы Python',
-                'ООП в Python',
-                'Работа с файлами',
-                'SQLite и PostgreSQL',
-                'Введение в Django',
-                'MVT Архитектура',
-                'Модели и ORM',
-                'Шаблоны Django',
-                'Формы и валидация',
-                'Аутентификация пользователей',
-                'Права доступа',
-                'Django REST Framework',
-                'Создание REST API',
-                'JWT Авторизация',
-                'Деплой проекта',
-                'Git и GitHub',
-                'Финальный проект',
+                t("courseById.Основы Python"),
+                t("courseById.ООП в Python"),
+                t("courseById.Работа с файлами"),
+                t("courseById.SQLite и PostgreSQL"),
+                t("courseById.Введение в Django"),
+                t("courseById.MVT Архитектура"),
+                t("courseById.Модели и ORM"),
+                t("courseById.Шаблоны Django"),
+                t("courseById.Формы и валидация"),
+                t("courseById.Аутентификация пользователей"),
+                t("courseById.Права доступа"),
+                t("courseById.Django REST Framework"),
+                t("courseById.Создание REST API"),
+                t("courseById.JWT Авторизация"),
+                t("courseById.Деплой проекта"),
+                t("courseById.Git и GitHub"),
+                t("courseById.Финальный проект"),
             ],
 
             technologies: [
@@ -774,13 +735,13 @@ export default function CourseById() {
             cert: '/certificate/mincraftbg.png',
             id: 8,
             title: 'Python Minecraft',
-            duration: '4 месяцев',
+            duration: t("information.3 месяцев"),
             level: 'Beginner',
             levelColor: 'text-emerald-400',
 
             tags: ['Python', 'Minecraft', 'Game Dev'],
 
-            description: 'Научись программировать через создание игр и проектов в Minecraft',
+            description: t("courseById.Научись программировать через создание игр и проектов в Minecraft"),
 
             subTitle: '16',
 
@@ -799,44 +760,44 @@ export default function CourseById() {
                 {
                     id: 1,
                     classIcon: 'fa-solid fa-chart-line',
-                    info: 'Уровень',
+                    info: t("information.Уровень"),
                     infor: 'Beginner',
                 },
                 {
                     id: 2,
                     classIcon: 'fa-solid fa-stopwatch',
-                    info: 'Длительность',
-                    infor: '4 месяцев',
+                    info: t("information.Длительность"),
+                    infor: t("information.3 месяцев"),
                 },
                 {
                     id: 3,
                     classIcon: 'fa-solid fa-calendar-check',
-                    info: 'Занятность',
-                    infor: '2 раза по 2ч/нед',
+                    info: t("information.Занятность"),
+                    infor: t("information.2 раза по 2ч/нед"),
                 },
                 {
                     id: 4,
                     classIcon: 'fa-solid fa-laptop',
-                    info: 'Формат',
+                    info: t("information.Формат"),
                     infor: 'Офлайн',
                 },
             ],
 
-            why: 'Minecraft превращает обучение программированию в игру: ученики сразу видят результат своего кода и учатся создавать собственные решения.',
+            why: t("courseById.Minecraft превращает обучение программированию в игру ученики сразу видят результат своего кода и учатся создавать собственные решения"),
 
             metodichka: [
-                'Знакомство с Python',
-                'Переменные и типы данных',
-                'Условия и циклы',
-                'Функции',
-                'Списки и словари',
-                'Работа с Minecraft API',
-                'Создание игровых объектов',
-                'Автоматизация действий',
-                'Игровая логика',
-                'Создание мини-игр',
-                'Проектирование уровней',
-                'Финальный проект',
+                t("courseById.Знакомство с Python"),
+                t("courseById.Переменные и типы данных"),
+                t("courseById.Условия и циклы"),
+                t("courseById.Функции"),
+                t("courseById.Списки и словари"),
+                t("courseById.Работа с Minecraft API"),
+                t("courseById.Создание игровых объектов"),
+                t("courseById.Автоматизация действий"),
+                t("courseById.Игровая логика"),
+                t("courseById.Создание мини-игр"),
+                t("courseById.Проектирование уровней"),
+                t("courseById.Финальный проект"),
             ],
 
             technologies: [
@@ -883,12 +844,12 @@ export default function CourseById() {
             cert: '/certificate/sqlbg.png',
             id: 9,
             title: 'SQL Developer',
-            duration: '4 месяцев',
+            duration: t("information.3 месяцев"),
             level: 'Beginner',
             levelColor: 'text-emerald-400',
             tags: ['SQL', 'PostgreSQL', 'Database'],
 
-            description: 'Научись хранить, обрабатывать и управлять данными как настоящий разработчик.',
+            description: t("courseById.Научись хранить, обрабатывать и управлять данными как настоящий разработчик"),
 
             subTitle: '18',
 
@@ -907,47 +868,47 @@ export default function CourseById() {
                 {
                     id: 1,
                     classIcon: 'fa-solid fa-chart-line',
-                    info: 'Уровень',
+                    info: t("information.Уровень"),
                     infor: 'Beginner',
                 },
                 {
                     id: 2,
                     classIcon: 'fa-solid fa-stopwatch',
-                    info: 'Длительность',
-                    infor: '4 месяцев',
+                    info: t("information.Длительность"),
+                    infor: t("information.3 месяцев"),
                 },
                 {
                     id: 3,
                     classIcon: 'fa-solid fa-calendar-check',
-                    info: 'Занятность',
-                    infor: '2 раза по 2ч/нед',
+                    info: t("information.Занятность"),
+                    infor: t("information.2 раза по 2ч/нед"),
                 },
                 {
                     id: 4,
                     classIcon: 'fa-solid fa-laptop',
-                    info: 'Формат',
+                    info: t("information.Формат"),
                     infor: 'Офлайн',
                 },
             ],
 
-            why: 'SQL и базы данных — основа большинства современных веб-приложений, CRM, интернет-магазинов и других цифровых систем.',
+            why: t("courseById.SQL и базы данных — основа большинства современных веб-приложений, CRM, интернет-магазинов и других цифровых систем"),
 
             metodichka: [
-                'Введение в базы данных',
-                'Основы SQL',
-                'SELECT запросы',
-                'WHERE и фильтрация',
-                'Сортировка данных',
-                'JOIN операции',
-                'GROUP BY и агрегатные функции',
-                'Подзапросы',
-                'Создание таблиц',
-                'Связи между таблицами',
-                'Нормализация данных',
-                'PostgreSQL',
-                'Индексы',
-                'Оптимизация запросов',
-                'Финальный проект',
+                t("courseById.Введение в базы данных"),
+                t("courseById.Основы SQL"),
+                t("courseById.SELECT запросы"),
+                t("courseById.WHERE и фильтрация"),
+                t("courseById.Сортировка данных"),
+                t("courseById.JOIN операции"),
+                t("courseById.GROUP BY и агрегатные функции"),
+                t("courseById.Подзапросы"),
+                t("courseById.Создание таблиц"),
+                t("courseById.Связи между таблицами"),
+                t("courseById.Нормализация данных"),
+                t("courseById.PostgreSQL"),
+                t("courseById.Индексы"),
+                t("courseById.Оптимизация запросов"),
+                t("courseById.Финальный проект"),
             ],
 
             technologies: [
@@ -994,13 +955,13 @@ export default function CourseById() {
             cert: '/certificate/scrachbg.png',
             id: 10,
             title: 'Scratch',
-            duration: '4 месяцев',
+            duration: t("information.2,5 месяцев"),
             level: 'Beginner',
             levelColor: 'text-emerald-400',
 
             tags: ['Scratch', 'Game Development', 'Logic'],
 
-            description: 'Создавай игры, анимации и интерактивные проекты, изучая основы программирования.',
+            description: t("courseById.Создавай игры, анимации и интерактивные проекты, изучая основы программирования"),
 
             subTitle: '20',
 
@@ -1019,44 +980,44 @@ export default function CourseById() {
                 {
                     id: 1,
                     classIcon: 'fa-solid fa-chart-line',
-                    info: 'Уровень',
+                    info: t("information.Уровень"),
                     infor: 'Beginner',
                 },
                 {
                     id: 2,
                     classIcon: 'fa-solid fa-stopwatch',
-                    info: 'Длительность',
-                    infor: '4 месяцев',
+                    info: t("information.Длительность"),
+                    infor: t("information.2,5 месяцев"),
                 },
                 {
                     id: 3,
                     classIcon: 'fa-solid fa-calendar-check',
-                    info: 'Занятность',
-                    infor: '2 раза по 2ч/нед',
+                    info: t("information.Занятность"),
+                    infor: t("information.2 раза по 2ч/нед"),
                 },
                 {
                     id: 4,
                     classIcon: 'fa-solid fa-laptop',
-                    info: 'Формат',
+                    info: t("information.Формат"),
                     infor: 'Офлайн',
                 },
             ],
 
-            why: 'Scratch — простой и увлекательный способ познакомиться с программированием через создание собственных игр и проектов.',
+            why: t("courseById.Scratch — простой и увлекательный способ познакомиться с программированием через создание собственных игр и проектов"),
 
             metodichka: [
-                'Знакомство со Scratch',
-                'Интерфейс программы',
-                'Спрайты и сцены',
-                'Блоки движения',
-                'События',
-                'Переменные',
-                'Циклы',
-                'Условия',
-                'Создание анимаций',
-                'Создание игр',
-                'Звуки и эффекты',
-                'Финальный проект',
+                t("courseById.Знакомство со Scratch"),
+                t("courseById.Интерфейс программы"),
+                t("courseById.Спрайты и сцены"),
+                t("courseById.Блоки движения"),
+                t("courseById.События"),
+                t("courseById.Переменные"),
+                t("courseById.Циклы"),
+                t("courseById.Условия"),
+                t("courseById.Создание анимаций"),
+                t("courseById.Создание игр"),
+                t("courseById.Звуки и эффекты"),
+                t("courseById.Финальный проект"),
             ],
 
             technologies: [
@@ -1103,13 +1064,13 @@ export default function CourseById() {
             cert: '/certificate/kidsbg.png',
             id: 11,
             title: 'Компьютерная грамотность',
-            duration: '4 месяцев',
+            duration: t("information.2 месяцев"),
             level: 'Beginner',
             levelColor: 'text-emerald-400',
 
             tags: ['Компьютер', 'Windows', 'Office', 'Internet'],
 
-            description: 'Освой компьютер с нуля и уверенно работай с современными цифровыми технологиями.',
+            description: t("courseById.Освой компьютер с нуля и уверенно работай с современными цифровыми технологиями"),
 
             subTitle: '22',
 
@@ -1128,42 +1089,42 @@ export default function CourseById() {
                 {
                     id: 1,
                     classIcon: 'fa-solid fa-chart-line',
-                    info: 'Уровень',
+                    info: t("information.Уровень"),
                     infor: 'Beginner',
                 },
                 {
                     id: 2,
                     classIcon: 'fa-solid fa-stopwatch',
-                    info: 'Длительность',
-                    infor: '4 месяцев',
+                    info: t("information.Длительность"),
+                    infor: t("information.2 месяцев"),
                 },
                 {
                     id: 3,
                     classIcon: 'fa-solid fa-calendar-check',
-                    info: 'Занятность',
-                    infor: '2 раза по 2ч/нед',
+                    info: t("information.Занятность"),
+                    infor: t("information.2 раза по 2ч/нед"),
                 },
                 {
                     id: 4,
                     classIcon: 'fa-solid fa-laptop',
-                    info: 'Формат',
+                    info: t("information.Формат"),
                     infor: 'Офлайн',
                 },
             ],
 
-            why: 'Компьютерная грамотность помогает уверенно пользоваться компьютером, современными программами и интернетом для учёбы, работы и повседневных задач.',
+            why: t("courseById.Компьютерная грамотность помогает уверенно пользоваться компьютером, современными программами и интернетом для учёбы, работы и повседневных задач"),
 
             metodichka: [
-                'Основы работы с компьютером',
-                'Windows и настройка системы',
-                'Работа с файлами и папками',
-                'Microsoft Word',
-                'Microsoft Excel',
-                'Microsoft PowerPoint',
-                'Работа с интернетом',
-                'Электронная почта',
-                'Безопасность в интернете',
-                'Выпускной проект',
+                t("courseById.Основы работы с компьютером"),
+                t("courseById.Windows и настройка системы"),
+                t("courseById.Работа с файлами и папками"),
+                t("courseById.Microsoft Word"),
+                t("courseById.Microsoft Excel"),
+                t("courseById.Microsoft PowerPoint"),
+                t("courseById.Работа с интернетом"),
+                t("courseById.Электронная почта"),
+                t("courseById.Безопасность в интернете"),
+                t("courseById.Выпускной проект"),
             ],
 
             technologies: [
@@ -1210,13 +1171,13 @@ export default function CourseById() {
             cert: '/certificate/csharpbg.png',
             id: 12,
             title: 'C# Developer',
-            duration: '4 месяцев',
+            duration: t("information.3 месяцев"),
             level: 'Middle',
             levelColor: 'text-amber-400',
 
             tags: ['C#', '.NET', 'SQL Server', 'Backend'],
 
-            description: 'Освой C# и .NET и научись создавать современные серверные приложения, API и полноценные backend-системы.',
+            description: t("courseById.Освой C# и .NET и научись создавать современные серверные приложения, API и полноценные backend-системы"),
 
             subTitle: '24',
 
@@ -1235,50 +1196,50 @@ export default function CourseById() {
                 {
                     id: 1,
                     classIcon: 'fa-solid fa-chart-line',
-                    info: 'Уровень',
+                    info: t("information.Уровень"),
                     infor: 'Middle',
                 },
                 {
                     id: 2,
                     classIcon: 'fa-solid fa-stopwatch',
-                    info: 'Длительность',
-                    infor: '4 месяцев',
+                    info: t("information.Длительность"),
+                    infor: t("information.3 месяцев"),
                 },
                 {
                     id: 3,
                     classIcon: 'fa-solid fa-calendar-check',
-                    info: 'Занятность',
-                    infor: '2 раза по 2ч/нед',
+                    info: t("information.Занятность"),
+                    infor: t("information.2 раза по 2ч/нед"),
                 },
                 {
                     id: 4,
                     classIcon: 'fa-solid fa-laptop',
-                    info: 'Формат',
+                    info: t("information.Формат"),
                     infor: 'Офлайн',
                 },
             ],
 
-            why: 'C# и .NET — мощные технологии для разработки веб-приложений, API, CRM-систем и корпоративных решений.',
+            why: t("courseById.C# и .NET — мощные технологии для разработки веб-приложений, API, CRM-систем и корпоративных решений"),
 
             metodichka: [
-                'Основы C#',
-                'Типы данных',
-                'Условия и циклы',
-                'Методы и функции',
-                'Коллекции',
-                'ООП в C#',
-                'LINQ',
-                'Обработка исключений',
-                'Работа с файлами',
-                'SQL Server',
-                'Entity Framework Core',
-                'ASP.NET Core',
-                'Создание REST API',
-                'JWT Авторизация',
-                'Архитектура приложений',
-                'Git и GitHub',
-                'Docker',
-                'Финальный проект',
+                t("courseById.Основы C#"),
+                t("courseById.Типы данных"),
+                t("courseById.Условия и циклы"),
+                t("courseById.Методы и функции"),
+                t("courseById.Коллекции"),
+                t("courseById.ООП в C#"),
+                t("courseById.LINQ"),
+                t("courseById.Обработка исключений"),
+                t("courseById.Работа с файлами"),
+                t("courseById.SQL Server"),
+                t("courseById.Entity Framework Core"),
+                t("courseById.ASP.NET Core"),
+                t("courseById.Создание REST API"),
+                t("courseById.JWT Авторизация"),
+                t("courseById.Архитектура приложений"),
+                t("courseById.Git и GitHub"),
+                t("courseById.Docker"),
+                t("courseById.Финальный проект"),
             ],
 
             technologies: [
@@ -1339,13 +1300,13 @@ export default function CourseById() {
             cert: '/certificate/scrachbg.png',
             id: 101,
             title: 'Scratch',
-            duration: '2,5 месяцев',
+            duration: t("information.2,5 месяцев"),
             level: 'Beginner',
             levelColor: 'text-emerald-400',
             place: "Душанбе",
 
             tags: ['Scratch', 'Game Development', 'Logic'],
-            description: 'Создавай игры, анимации и интерактивные проекты, изучая основы программирования.',
+            description: t("courseById.Создавай игры, анимации и интерактивные проекты, изучая основы программирования"),
 
 
             subTitle: '20',
@@ -1365,44 +1326,44 @@ export default function CourseById() {
                 {
                     id: 1,
                     classIcon: 'fa-solid fa-chart-line',
-                    info: 'Уровень',
+                    info: t("information.Уровень"),
                     infor: 'Beginner',
                 },
                 {
                     id: 2,
                     classIcon: 'fa-solid fa-stopwatch',
-                    info: 'Длительность',
-                    infor: '2,5 месяцев',
+                    info: t("information.Длительность"),
+                    infor: t("information.2,5 месяцев"),
                 },
                 {
                     id: 3,
                     classIcon: 'fa-solid fa-calendar-check',
-                    info: 'Занятность',
-                    infor: '3 раза по 1,5ч/нед',
+                    info: t("information.Занятность"),
+                    infor: t("information.3 раза по 1,5ч/нед"),
                 },
                 {
                     id: 4,
                     classIcon: 'fa-solid fa-laptop',
-                    info: 'Формат',
+                    info: t("information.Формат"),
                     infor: 'Офлайн',
                 },
             ],
 
-            why: 'Scratch — простой и увлекательный способ познакомиться с программированием через создание собственных игр и проектов.',
+            why: t("courseById.Scratch — простой и увлекательный способ познакомиться с программированием через создание собственных игр и проектов"),
 
             metodichka: [
-                'Знакомство со Scratch',
-                'Интерфейс программы',
-                'Спрайты и сцены',
-                'Блоки движения',
-                'События',
-                'Переменные',
-                'Циклы',
-                'Условия',
-                'Создание анимаций',
-                'Создание игр',
-                'Звуки и эффекты',
-                'Финальный проект',
+                t("courseById.Знакомство со Scratch"),
+                t("courseById.Интерфейс программы"),
+                t("courseById.Спрайты и сцены"),
+                t("courseById.Блоки движения"),
+                t("courseById.События"),
+                t("courseById.Переменные"),
+                t("courseById.Циклы"),
+                t("courseById.Условия"),
+                t("courseById.Создание анимаций"),
+                t("courseById.Создание игр"),
+                t("courseById.Звуки и эффекты"),
+                t("courseById.Финальный проект"),
             ],
 
             technologies: [
@@ -1449,13 +1410,13 @@ export default function CourseById() {
             cert: '/cert2-no-bg-preview (carve.photos).png',
             id: 102,
             title: 'App Inventor',
-            duration: '2,5 месяцев',
+            duration: t("information.2,5 месяцев"),
             level: 'Beginner',
             levelColor: 'text-emerald-400',
 
             tags: ['App Inventor', 'Mobile Apps', 'Android'],
 
-            description: 'Создание собственных мобильных приложений и игр для Android',
+            description: t("courseById.Создание собственных мобильных приложений и игр для Android"),
 
             subTitle:
                 'Переход от блочных игр к созданию реальных полезных приложений для смартфонов',
@@ -1475,44 +1436,44 @@ export default function CourseById() {
                 {
                     id: 1,
                     classIcon: 'fa-solid fa-chart-line',
-                    info: 'Уровень',
+                    info: t("information.Уровень"),
                     infor: 'Beginner',
                 },
                 {
                     id: 2,
                     classIcon: 'fa-solid fa-stopwatch',
-                    info: 'Длительность',
-                    infor: '2,5 месяцев',
+                    info: t("information.Длительность"),
+                    infor: t("information.2,5 месяцев"),
                 },
                 {
                     id: 3,
                     classIcon: 'fa-solid fa-calendar-check',
-                    info: 'Занятность',
-                    infor: '3 раза по 1,5ч/нед',
+                    info: t("information.Занятность"),
+                    infor: t("information.3 раза по 1,5ч/нед"),
                 },
                 {
                     id: 4,
                     classIcon: 'fa-solid fa-laptop',
-                    info: 'Формат',
+                    info: t("information.Формат"),
                     infor: 'Офлайн',
                 },
             ],
 
-            why: 'Ребенок увидит, что телефон — это не только инструмент для игр, но и мощная среда для реализации собственных инженерных и творческих идей',
+            why: t("courseById.Ребенок увидит, что телефон — это не только инструмент для игр, но и мощная среда для реализации собственных инженерных и творческих идей"),
 
             metodichka: [
-                'Знакомство с MIT App Inventor',
-                'Интерфейс Дизайнера и Блоков',
-                'Компоненты экрана и разметка',
-                'Обработка кликов и событий',
-                'Работа с текстом и звуком',
-                'Переменные и математика',
-                'Условия и логические ветвления',
-                'Использование холста (Canvas) и анимация',
-                'Работа с датчиками смартфона (акселерометр)',
-                'Хранение данных (TinyDB)',
-                'Тестирование на реальном телефоне',
-                'Публикация и финальный проект',
+                t("courseById.Знакомство с MIT App Inventor"),
+                t("courseById.Интерфейс Дизайнера и Блоков"),
+                t("courseById.Компоненты экрана и разметка"),
+                t("courseById.Обработка кликов и событий"),
+                t("courseById.Работа с текстом и звуком"),
+                t("courseById.Переменные и математика"),
+                t("courseById.Условия и логические ветвления"),
+                t("courseById.Использование холста (Canvas) и анимация"),
+                t("courseById.Работа с датчиками смартфона (акселерометр)"),
+                t("courseById.Хранение данных (TinyDB)"),
+                t("courseById.Тестирование на реальном телефоне"),
+                t("courseById.Публикация и финальный проект"),
             ],
 
             technologies: [
@@ -1559,11 +1520,11 @@ export default function CourseById() {
             cert: '/certificate/html&cssbg.png',
             id: 103,
             title: 'Frontend (HTML && CSS)',
-            duration: '4 месяцев',
+            duration: t("information.4 месяцев"),
             level: 'Beginner',
             levelColor: 'text-emerald-400',
             tags: ['HTML', 'CSS'],
-            description: 'Получи фундаментальные навыки frontend-разработки: от структуры HTML-страниц до адаптивного дизайна с помощью CSS. Создай собственные проекты и подготовься к изучению JavaScript.',
+            description: t("courseById.Получи фундаментальные навыки frontend-разработки от структуры HTML-страниц до адаптивного дизайна с помощью CSS. Создай собственные проекты и подготовься к изучению JavaScript"),
             subTitle: '1',
             icon: 'fa-solid fa-code',
             iconBg: 'bg-cyan-500/20',
@@ -1574,34 +1535,34 @@ export default function CourseById() {
             glow: 'hover:shadow-cyan-500/10',
             image: '/html&cssImage.png',
             information: [
-                { id: 1, classIcon: 'fa-solid fa-chart-line', info: 'Уровень', infor: 'Beginer' },
+                { id: 1, classIcon: 'fa-solid fa-chart-line', info: t("information.Уровень"), infor: 'Beginer' },
                 {
                     id: 2,
                     classIcon: 'fa-solid fa-stopwatch',
-                    info: 'Длительность',
-                    infor: '4 месяцев',
+                    info: t("information.Длительность"),
+                    infor: t("information.4 месяцев"),
                 },
                 {
                     id: 3,
                     classIcon: 'fa-solid fa-calendar-check',
-                    info: 'Занятность',
-                    infor: '3 раза по 1,5ч/нед',
+                    info: t("information.Занятность"),
+                    infor: t("information.3 раза по 1,5ч/нед"),
                 },
                 {
                     id: 4,
                     classIcon: 'fa-solid fa-laptop',
-                    info: 'Формат',
+                    info: t("information.Формат"),
                     infor: 'Офлайн',
                 },
             ],
-            why: 'Идеальный фундамент для старта в веб-разработке и создания коммерческих проектов.',
+            why: t("courseById.Идеальный фундамент для старта в веб-разработке и создания коммерческих проектов"),
             metodichka: [
-                'Основы HTML',
-                'Основы CSS',
-                'Макеты и позиционирование',
-                'Адаптивный дизайн',
-                'Flexbox',
-                'Переходы и анимация',
+                t("courseById.Основы HTML"),
+                t("courseById.Основы CSS"),
+                t("courseById.Макеты и позиционирование"),
+                t("courseById.Адаптивный дизайн"),
+                t("courseById.Flexbox"),
+                t("courseById.Переходы и анимация"),
             ],
             technologies: [
                 {
@@ -1635,11 +1596,11 @@ export default function CourseById() {
             cert: '/certificate/jsbg.png',
             id: 104,
             title: 'JavaScript',
-            duration: '3 месяцев',
+            duration: t("information.4 месяцев"),
             level: 'Junior',
             levelColor: 'text-yellow-400',
             tags: ['JavaScript', 'ES6+', 'DOM'],
-            description: 'Изучи JavaScript с нуля: от переменных и циклов до работы с DOM, API и асинхронным кодом. Создавай интерактивные приложения и подготовься к изучению React.',
+            description: t("courseById.Изучи JavaScript с нуля от переменных и циклов до работы с DOM, API и асинхронным кодом. Создавай интерактивные приложения и подготовься к изучению React"),
             subTitle: '3',
             icon: 'fa-brands fa-js',
             iconBg: 'bg-yellow-500/20',
@@ -1654,43 +1615,43 @@ export default function CourseById() {
                 {
                     id: 1,
                     classIcon: 'fa-solid fa-chart-line',
-                    info: 'Уровень',
+                    info: t("information.Уровень"),
                     infor: 'Junior',
                 },
                 {
                     id: 2,
                     classIcon: 'fa-solid fa-stopwatch',
-                    info: 'Длительность',
-                    infor: '3 месяцев',
+                    info: t("information.Длительность"),
+                    infor: t("information.4 месяцев"),
                 },
                 {
                     id: 3,
                     classIcon: 'fa-solid fa-calendar-check',
-                    info: 'Занятность',
-                    infor: '3 раза по 1,5ч/нед',
+                    info: t("information.Занятность"),
+                    infor: t("information.3 раза по 1,5ч/нед"),
                 },
                 {
                     id: 4,
                     classIcon: 'fa-solid fa-laptop',
-                    info: 'Формат',
+                    info: t("information.Формат"),
                     infor: 'Офлайн',
                 },
             ],
 
-            why: 'JavaScript — один из ключевых языков веб-разработки, который позволяет превращать обычные сайты в интерактивные и функциональные приложения.',
+            why: t("courseById.JavaScript — один из ключевых языков веб-разработки, который позволяет превращать обычные сайты в интерактивные и функциональные приложения"),
 
             metodichka: [
-                'Основы JavaScript',
-                'Переменные и типы данных',
-                'Условия и циклы',
-                'Функции',
-                'Массивы и объекты',
-                'DOM и события',
-                'Асинхронность',
-                'Fetch API',
-                'ES6+',
-                'Модули',
-                'Практические проекты',
+                t("courseById.Основы JavaScript"),
+                t("courseById.Переменные и типы данных"),
+                t("courseById.Условия и циклы"),
+                t("courseById.Функции"),
+                t("courseById.Массивы и объекты"),
+                t("courseById.DOM и события"),
+                t("courseById.Асинхронность"),
+                t("courseById.Fetch API"),
+                t("courseById.ES6+"),
+                t("courseById.Модули"),
+                t("courseById.Практические проекты"),
             ],
 
             technologies: [
@@ -1731,13 +1692,13 @@ export default function CourseById() {
             cert: '/certificate/pythonbg.png',
             id: 105,
             title: 'Python Developer',
-            duration: '3 месяцев',
+            duration: t("information.4 месяцев"),
             level: 'Beginner',
             levelColor: 'text-emerald-400',
 
             tags: ['Python', 'Telegram bot', 'SQLite'],
 
-            description: 'Python — отличный первый язык программирования, который помогает развить алгоритмическое мышление и подготовиться к дальнейшему изучению Web-разработки, AI и Data Science.',
+            description: t("courseById.Python — отличный первый язык программирования, который помогает развить алгоритмическое мышление и подготовиться к дальнейшему изучению Web-разработки, AI и Data Science"),
 
             subTitle: '9',
 
@@ -1756,43 +1717,43 @@ export default function CourseById() {
                 {
                     id: 1,
                     classIcon: 'fa-solid fa-chart-line',
-                    info: 'Уровень',
+                    info: t("information.Уровень"),
                     infor: 'Beginner',
                 },
                 {
                     id: 2,
                     classIcon: 'fa-solid fa-stopwatch',
-                    info: 'Длительность',
-                    infor: '3 месяцев',
+                    info: t("information.Длительность"),
+                    infor: t("information.4 месяцев"),
                 },
                 {
                     id: 3,
                     classIcon: 'fa-solid fa-calendar-check',
-                    info: 'Занятность',
-                    infor: '3 раза по 1,5ч/нед',
+                    info: t("information.Занятность"),
+                    infor: t("information.3 раза по 1,5ч/нед"),
                 },
                 {
                     id: 4,
                     classIcon: 'fa-solid fa-laptop',
-                    info: 'Формат',
+                    info: t("information.Формат"),
                     infor: 'Офлайн',
                 },
             ],
 
-            why: 'Простой для старта — понятный синтаксис позволяет быстро освоить основы программирования.',
+            why: t("courseById.Простой для старта — понятный синтаксис позволяет быстро освоить основы программирования"),
 
             metodichka: [
-                'Введение в Python',
-                'Переменные и типы данных',
-                'Условия и циклы',
-                'Функции',
-                'Списки и словари',
-                'Работа с файлами',
-                'Модули и пакеты',
-                'Обработка ошибок',
-                'SQLite и базы данных',
-                'Создание REST API',
-                'Практические проекты',
+                t("courseById.Введение в Python"),
+                t("courseById.Переменные и типы данных"),
+                t("courseById.Условия и циклы"),
+                t("courseById.Функции"),
+                t("courseById.Списки и словари"),
+                t("courseById.Работа с файлами"),
+                t("courseById.Модули и пакеты"),
+                t("courseById.Обработка ошибок"),
+                t("courseById.SQLite и базы данных"),
+                t("courseById.Создание REST API"),
+                t("courseById.Практические проекты"),
             ],
 
             technologies: [
@@ -1833,13 +1794,13 @@ export default function CourseById() {
             cert: '/certificate/kidsbg.png',
             id: 106,
             title: 'Компьютерная грамотность',
-            duration: '2 месяцев',
+            duration: t("information.2 месяцев"),
             level: 'Beginner',
             levelColor: 'text-emerald-400',
 
             tags: ['Компьютер', 'Windows', 'Office', 'Internet'],
 
-            description: 'Освой компьютер с нуля и уверенно работай с современными цифровыми технологиями.',
+            description: t("courseById.Освой компьютер с нуля и уверенно работай с современными цифровыми технологиями"),
 
             subTitle: '22',
 
@@ -1858,42 +1819,42 @@ export default function CourseById() {
                 {
                     id: 1,
                     classIcon: 'fa-solid fa-chart-line',
-                    info: 'Уровень',
+                    info: t("information.Уровень"),
                     infor: 'Beginner',
                 },
                 {
                     id: 2,
                     classIcon: 'fa-solid fa-stopwatch',
-                    info: 'Длительность',
-                    infor: '3 месяцев',
+                    info: t("information.Длительность"),
+                    infor: t("information.2 месяцев"),
                 },
                 {
                     id: 3,
                     classIcon: 'fa-solid fa-calendar-check',
-                    info: 'Занятность',
-                    infor: '3 раза по 1,5ч/нед',
+                    info: t("information.Занятность"),
+                    infor: t("information.3 раза по 1,5ч/нед"),
                 },
                 {
                     id: 4,
                     classIcon: 'fa-solid fa-laptop',
-                    info: 'Формат',
+                    info: t("information.Формат"),
                     infor: 'Офлайн',
                 },
             ],
 
-            why: 'Компьютерная грамотность помогает уверенно пользоваться компьютером, современными программами и интернетом для учёбы, работы и повседневных задач.',
+            why: t("courseById.Компьютерная грамотность помогает уверенно пользоваться компьютером, современными программами и интернетом для учёбы, работы и повседневных задач"),
 
             metodichka: [
-                'Основы работы с компьютером',
-                'Windows и настройка системы',
-                'Работа с файлами и папками',
-                'Microsoft Word',
-                'Microsoft Excel',
-                'Microsoft PowerPoint',
-                'Работа с интернетом',
-                'Электронная почта',
-                'Безопасность в интернете',
-                'Выпускной проект',
+                t("courseById.Основы работы с компьютером"),
+                t("courseById.Windows и настройка системы"),
+                t("courseById.Работа с файлами и папками"),
+                t("courseById.Microsoft Word"),
+                t("courseById.Microsoft Excel"),
+                t("courseById.Microsoft PowerPoint"),
+                t("courseById.Работа с интернетом"),
+                t("courseById.Электронная почта"),
+                t("courseById.Безопасность в интернете"),
+                t("courseById.Выпускной проект"),
             ],
 
             technologies: [
@@ -1940,14 +1901,14 @@ export default function CourseById() {
             cert: '/certificate/sqlbg.png',
             id: 107,
             title: 'Data Analytics',
-            duration: '2 месяцев',
+            duration: t("information.2 месяцев"),
             level: 'Intermediate',
             levelColor: 'text-blue-400',
 
             tags: ['Excel', 'BI'],
 
-            subTitle:
-                'Превращение сырых цифр в бизнес-решения с помощью программирования и математической статистики',
+            description:
+                t("courseById.Превращение сырых цифр в бизнес решения с помощью программирования и математической статистики"),
 
             icon: 'fa-solid fa-chart-pie',
             iconBg: 'bg-blue-500/20',
@@ -1964,42 +1925,42 @@ export default function CourseById() {
                 {
                     id: 1,
                     classIcon: 'fa-solid fa-chart-line',
-                    info: 'Уровень',
+                    info: t("information.Уровень"),
                     infor: 'Intermediate',
                 },
                 {
                     id: 2,
                     classIcon: 'fa-solid fa-stopwatch',
-                    info: 'Длительность',
-                    infor: '2 месяцев',
+                    info: t("information.Длительность"),
+                    infor: t("information.2 месяцев"),
                 },
                 {
                     id: 3,
                     classIcon: 'fa-solid fa-calendar-check',
-                    info: 'Занятность',
-                    infor: '3 раза по 1,5ч/нед',
+                    info: t("information.Занятность"),
+                    infor: t("information.3 раза по 1,5ч/нед"),
                 },
                 {
                     id: 4,
                     classIcon: 'fa-solid fa-laptop',
-                    info: 'Формат',
+                    info: t("information.Формат"),
                     infor: 'Офлайн',
                 },
             ],
 
-            why: 'Студенты научатся автоматизировать рутинные отчеты, находить скрытые закономерности в терабайтах информации и говорить со сложным бизнесом на понятном языке графиков',
+            why: t("courseById.Студенты научатся автоматизировать рутинные отчеты, находить скрытые закономерности в терабайтах информации и говорить со сложным бизнесом на понятном языке графиков"),
 
             metodichka: [
-                'Введение в Data Analytics',
-                'Работа с библиотеками NumPy и Pandas',
-                'Очистка данных и обработка пропусков',
-                'Основы статистики и проверка гипотез',
-                'Визуализация данных (Matplotlib, Seaborn)',
-                'Построение дашбордов в BI-системах',
-                'Разведочный анализ данных (EDA)',
-                'Анализ продуктовых метрик и A/B тесты',
-                'Парсинг данных из веб-источников и API',
-                'Защита дипломного бизнес-кейса',
+                t("courseById.Введение в Data Analytics"),
+                t("courseById.Работа с библиотеками NumPy и Pandas"),
+                t("courseById.Очистка данных и обработка пропусков"),
+                t("courseById.Основы статистики и проверка гипотез"),
+                t("courseById.Визуализация данных (Matplotlib, Seaborn)"),
+                t("courseById.Построение дашбордов в BI-системах"),
+                t("courseById.Разведочный анализ данных (EDA)"),
+                t("courseById.Анализ продуктовых метрик и A/B тесты"),
+                t("courseById.Парсинг данных из веб-источников и API"),
+                t("courseById.Защита дипломного бизнес-кейса"),
             ],
 
             technologies: [
@@ -2034,13 +1995,13 @@ export default function CourseById() {
             cert: '/certificate/csharpbg.png',
             id: 108,
             title: 'C# Developer',
-            duration: '4 месяцев',
+            duration: t("information.6 месяцев"),
             level: 'Middle',
             levelColor: 'text-amber-400',
 
             tags: ['C#', '.NET', 'SQL Server', 'Backend'],
 
-            description: 'Освой C# и .NET и научись создавать современные серверные приложения, API и полноценные backend-системы.',
+            description:t("courseById.Освой C# и .NET и научись создавать современные серверные приложения, API и полноценные backend-системы"),
 
             subTitle: '24',
 
@@ -2059,50 +2020,50 @@ export default function CourseById() {
                 {
                     id: 1,
                     classIcon: 'fa-solid fa-chart-line',
-                    info: 'Уровень',
+                    info: t("information.Уровень"),
                     infor: 'Middle',
                 },
                 {
                     id: 2,
                     classIcon: 'fa-solid fa-stopwatch',
-                    info: 'Длительность',
-                    infor: '4 месяцев',
+                    info: t("information.Длительность"),
+                    infor: t("information.6 месяцев"),
                 },
                 {
                     id: 3,
                     classIcon: 'fa-solid fa-calendar-check',
-                    info: 'Занятность',
-                    infor: '2 раза по 2ч/нед',
+                    info: t("information.Занятность"),
+                    infor: t("information.3 раза по 1,5ч/нед"),
                 },
                 {
                     id: 4,
                     classIcon: 'fa-solid fa-laptop',
-                    info: 'Формат',
+                    info: t("information.Формат"),
                     infor: 'Офлайн',
                 },
             ],
 
-            why: 'C# и .NET — мощные технологии для разработки веб-приложений, API, CRM-систем и корпоративных решений.',
+            why:t("courseById.C# и .NET — мощные технологии для разработки веб-приложений, API, CRM-систем и корпоративных решений"),
 
             metodichka: [
-                'Основы C#',
-                'Типы данных',
-                'Условия и циклы',
-                'Методы и функции',
-                'Коллекции',
-                'ООП в C#',
-                'LINQ',
-                'Обработка исключений',
-                'Работа с файлами',
-                'SQL Server',
-                'Entity Framework Core',
-                'ASP.NET Core',
-                'Создание REST API',
-                'JWT Авторизация',
-                'Архитектура приложений',
-                'Git и GitHub',
-                'Docker',
-                'Финальный проект',
+                t("courseById.Основы C#"),
+                t("courseById.Типы данных"),
+                t("courseById.Условия и циклы"),
+                t("courseById.Методы и функции"),
+                t("courseById.Коллекции"),
+                t("courseById.ООП в C#"),
+                t("courseById.LINQ"),
+                t("courseById.Обработка исключений"),
+                t("courseById.Работа с файлами"),
+                t("courseById.SQL Server"),
+                t("courseById.Entity Framework Core"),
+                t("courseById.ASP.NET Core"),
+                t("courseById.Создание REST API"),
+                t("courseById.JWT Авторизация"),
+                t("courseById.Архитектура приложений"),
+                t("courseById.Git и GitHub"),
+                t("courseById.Docker"),
+                t("courseById.Финальный проект"),
             ],
 
             technologies: [
@@ -2185,25 +2146,25 @@ export default function CourseById() {
                 {
                     id: 1,
                     classIcon: 'fa-solid fa-chart-line',
-                    info: 'Уровень',
+                    info: t("information.Уровень"),
                     infor: 'Advanced',
                 },
                 {
                     id: 2,
                     classIcon: 'fa-solid fa-stopwatch',
-                    info: 'Длительность',
+                    info: t("information.Длительность"),
                     infor: '6 месяцев',
                 },
                 {
                     id: 3,
                     classIcon: 'fa-solid fa-calendar-check',
-                    info: 'Занятность',
-                    infor: '3 раза по 1,5ч/нед',
+                    info: t("information.Занятность"),
+                    infor: t("information.3 раза по 1,5ч/нед"),
                 },
                 {
                     id: 4,
                     classIcon: 'fa-solid fa-laptop',
-                    info: 'Формат',
+                    info: t("information.Формат"),
                     infor: 'Офлайн',
                 },
             ],
@@ -2272,14 +2233,14 @@ export default function CourseById() {
             cert: '/certificate/mincraftbg.png',
             id: 110,
             title: 'Microsoft Excel',
-            duration: '2 месяцев',
+            duration: t("information.2 месяцев"),
             level: 'Intermediate',
             levelColor: 'text-emerald-400',
 
             tags: ['Excel', 'Data Analysis', 'Formulas', 'VBA'],
 
             description:
-                'Укрощение больших объемов данных, построение сложных графиков и превращение рутинной работы в один клик',
+                t("courseById.Укрощение больших объемов данных, построение сложных графиков и превращение рутинной работы в один клик"),
 
             icon: 'fa-solid fa-table',
             iconBg: 'bg-emerald-500/20',
@@ -2296,44 +2257,44 @@ export default function CourseById() {
                 {
                     id: 1,
                     classIcon: 'fa-solid fa-chart-line',
-                    info: 'Уровень',
+                    info: t("information.Уровень"),
                     infor: 'Intermediate',
                 },
                 {
                     id: 2,
                     classIcon: 'fa-solid fa-stopwatch',
-                    info: 'Длительность',
-                    infor: '2 месяцев',
+                    info: t("information.Длительность"),
+                    infor: t("information.2 месяцев"),
                 },
                 {
                     id: 3,
                     classIcon: 'fa-solid fa-calendar-check',
-                    info: 'Занятность',
-                    infor: '3 раза по 1,5ч/нед',
+                    info: t("information.Занятность"),
+                    infor: t("information.3 раза по 1,5ч/нед"),
                 },
                 {
                     id: 4,
                     classIcon: 'fa-solid fa-laptop',
-                    info: 'Формат',
+                    info: t("information.Формат"),
                     infor: 'Офлайн',
                 },
             ],
 
-            why: 'Excel помогает быстро обрабатывать данные, автоматизировать расчёты, создавать отчёты и представлять информацию в удобном виде.',
+            why: t("courseById.Excel помогает быстро обрабатывать данные, автоматизировать расчёты, создавать отчёты и представлять информацию в удобном виде"),
 
             metodichka: [
-                'Знакомство с интерфейсом Excel, горячие клавиши и типы данных',
-                'Базовые формулы, абсолютные и относительные ссылки',
-                'Логические функции и ветвление (ЕСЛИ, И, ИЛИ)',
-                'Функции поиска и связывания данных (ВПР, ГПР, ИНДЕКС, ПОИСКПОЗ)',
-                'Текстовые и математические функции для чистки данных',
-                'Умные таблицы, сортировка и продвинутая фильтрация',
-                'Условное форматирование для визуального выделения трендов',
-                'Сводные таблицы (Pivot Tables): группировка данных и срезы',
-                'Инструменты анализа «Что-Если», подбор параметра и поиск решения',
-                'Построение профессиональных дашбордов и продвинутых диаграмм',
-                'Введение в Power Query для импорта и трансформации данных',
-                'Основы автоматизации: запись макросов и знакомство с VBA',
+                t("courseById.Знакомство с интерфейсом Excel, горячие клавиши и типы данных"),
+                t("courseById.Базовые формулы, абсолютные и относительные ссылки"),
+                t("courseById.Логические функции и ветвление (ЕСЛИ, И, ИЛИ)"),
+                t("courseById.Функции поиска и связывания данных (ВПР, ГПР, ИНДЕКС, ПОИСКПОЗ)"),
+                t("courseById.Текстовые и математические функции для чистки данных"),
+                t("courseById.Умные таблицы, сортировка и продвинутая фильтрация"),
+                t("courseById.Условноеt форматрование для визуального выделения трендов"),
+                t("courseById.Сводные таблицы (Pivot Tables): группировка данных и срезы"),
+                t("courseById.Инструменты анализа «Что-Если», подбор параметра и поиск решения"),
+                t("courseById.Построение профессиональных дашбордов и продвинутых диаграмм"),
+                t("courseById.Введение в Power Query для импорта и трансформации данных"),
+                t("courseById.Основы автоматизации: запись макросов и знакомство с VBA"),
             ],
 
             technologies: [
@@ -2379,11 +2340,11 @@ export default function CourseById() {
         {
             id: 111,
             title: 'React Developer',
-            duration: '4 месяцев',
+            duration: t("information.4 месяцев"),
             level: 'Middle',
             levelColor: 'text-amber-400',
             tags: ['JavaScript', 'React', 'Redux', 'Redux/toolkit', 'API'],
-            description: 'Изучи React и научись создавать быстрые, интерактивные и масштабируемые интерфейсы. Работай с компонентами, управляй состоянием приложения и разрабатывай реальные проекты от идеи до готового продукта.',
+            description: t("courseById.Изучи React и научись создавать быстрые, интерактивные и масштабируемые интерфейсы. Работай с компонентами, управляй состоянием приложения и разрабатывай реальные проекты от идеи до готового продукта"),
             subTitle: '5',
 
             icon: 'fa-brands fa-react',
@@ -2402,46 +2363,46 @@ export default function CourseById() {
                 {
                     id: 1,
                     classIcon: 'fa-solid fa-chart-line',
-                    info: 'Уровень',
+                    info: t("information.Уровень"),
                     infor: 'Middle',
                 },
                 {
                     id: 2,
                     classIcon: 'fa-solid fa-stopwatch',
-                    info: 'Длительность',
-                    infor: '4 месяцев',
+                    info: t("information.Длительность"),
+                    infor: t("information.4 месяцев"),
                 },
                 {
                     id: 3,
                     classIcon: 'fa-solid fa-calendar-check',
-                    info: 'Занятность',
-                    infor: '3 раза по 1.5ч/нед',
+                    info: t("information.Занятность"),
+                    infor: t("information.3 раза по 1,5ч/нед"),
                 },
                 {
                     id: 4,
                     classIcon: 'fa-solid fa-laptop',
-                    info: 'Формат',
+                    info: t("information.Формат"),
                     infor: 'Офлайн',
                 },
             ],
 
-            why: 'React — популярная JavaScript-библиотека для создания пользовательских интерфейсов. Она помогает разрабатывать современные веб-приложения, разделять интерфейс на переиспользуемые компоненты и эффективно управлять данными.',
+            why: t("courseById.React — популярная JavaScript-библиотека для создания пользовательских интерфейсов. Она помогает разрабатывать современные веб-приложения, разделять интерфейс на переиспользуемые компоненты и эффективно управлять данными"),
 
             metodichka: [
-                'Основы React',
-                'JSX',
-                'Компоненты',
-                'Props и State',
-                'useState',
-                'useEffect',
-                'React Router',
-                'Работа с API',
-                'Axios',
-                'Redux Toolkit',
-                'Firebase',
-                'Авторизация',
-                'Оптимизация приложений',
-                'Деплой проекта',
+                t("courseById.Основы React"),
+                t("courseById.JSX"),
+                t("courseById.Компоненты"),
+                t("courseById.Props и State"),
+                t("courseById.useState"),
+                t("courseById.useEffect"),
+                t("courseById.React Router"),
+                t("courseById.Работа с API"),
+                t("courseById.Axios"),
+                t("courseById.Redux Toolkit"),
+                t("courseById.Firebase"),
+                t("courseById.Авторизация"),
+                t("courseById.Оптимизация приложений"),
+                t("courseById.Деплой проекта"),
             ],
 
             technologies: [
@@ -2488,14 +2449,14 @@ export default function CourseById() {
             cert: '/certificate/kidsbg.png',
             id: 112,
             title: 'Graphic Design',
-            duration: '4 месяца',
+            duration: t("information.4 месяцев"),
             level: 'Beginner',
             levelColor: 'text-emerald-400',
 
             tags: ['Design', 'Photoshop', 'Illustrator', 'Figma'],
 
             description:
-                'Визуализация идей, создание стильной графики и разработка коммерческих дизайн-проектов с нуля',
+            t("courseById.Визуализация идей, создание стильной графики и разработка коммерческих дизайн-проектов с нуля"),
 
             icon: 'fa-solid fa-palette',
             iconBg: 'bg-pink-500/20',
@@ -2512,44 +2473,44 @@ export default function CourseById() {
                 {
                     id: 1,
                     classIcon: 'fa-solid fa-chart-line',
-                    info: 'Уровень',
+                    info: t("information.Уровень"),
                     infor: 'Beginner',
                 },
                 {
                     id: 2,
                     classIcon: 'fa-solid fa-stopwatch',
-                    info: 'Длительность',
-                    infor: '2 месяцев',
+                    info: t("information.Длительность"),
+                    infor: t("information.4 месяцев"),
                 },
                 {
                     id: 3,
                     classIcon: 'fa-solid fa-calendar-check',
-                    info: 'Занятность',
-                    infor: '3 раза по 1,5ч/нед',
+                    info: t("information.Занятность"),
+                    infor: t("information.3 раза по 1,5ч/нед"),
                 },
                 {
                     id: 4,
                     classIcon: 'fa-solid fa-laptop',
-                    info: 'Формат',
+                    info: t("information.Формат"),
                     infor: 'Офлайн',
                 },
             ],
 
-            why: 'Графический дизайн помогает развить креативность, визуальное мышление и научиться превращать идеи в качественные и привлекательные дизайны.',
+            why:t("courseById.Графический дизайн помогает развить креативность, визуальное мышление и научиться превращать идеи в качественные и привлекательные дизайны"),
 
             metodichka: [
-                'Введение в графический дизайн: основы композиции и визуальной иерархии',
-                'Теория цвета (колористика) и работа с цветовыми палитрами',
-                'Типографика: анатомия шрифтов, подбор и сочетание шрифтовых пар',
-                'Знакомство с Adobe Photoshop: интерфейс, слои, базовые инструменты',
-                'Растровая графика: ретушь фотографий, цветокоррекция и коллажирование',
-                'Знакомство с Adobe Illustrator: работа с векторными контурами и шейпами',
-                'Векторная графика: создание иллюстраций, иконок и персонажей',
-                'Разработка логотипов и основы фирменного стиля (айдентика)',
-                'Работа в Figma: создание макетов для соцсетей, баннеров и полиграфии',
-                'Подготовка макетов к печати (допечатная подготовка / Prepress)',
-                'Психология восприятия в дизайне и бриф от реального заказчика',
-                'Оформление портфолио на Behance и презентация финального проекта',
+                t("courseById.Введение в графический дизайн основы композиции и визуальной иерархии"),
+                t("courseById.Теория цвета (колористика) и работа с цветовыми палитрами"),
+                t("courseById.Типографика анатомия шрифтов, подбор и сочетание шрифтовых пар"),
+                t("courseById.Знакомство с Adobe Photoshop интерфейс, слои, базовые инструменты"),
+                t("courseById.Растровая графика ретушь фотографий, цветокоррекция и коллажирование"),
+                t("courseById.Знакомство с Adobe Illustrator работа с векторными контурами и шейпами"),
+                t("courseById.Векторная графика создание иллюстраций, иконок и персонажей"),
+                t("courseById.Разработка логотипов и основы фирменного стиля (айдентика)"),
+                t("courseById.Работа в Figma создание макетов для соцсетей, баннеров и полиграфии"),
+                t("courseById.Подготовка макетов к печати (допечатная подготовка / Prepress)"),
+                t("courseById.Психология восприятия в дизайне и бриф от реального заказчика"),
+                t("courseById.Оформление портфолио на Behance и презентация финального проекта"),
             ],
 
             technologies: [
@@ -2596,12 +2557,12 @@ export default function CourseById() {
             cert: '/certificate/html&cssbg.png',
             id: 113,
             title: 'UI/UX Designer',
-            duration: '4 месяцев',
+            duration: t("information.3 месяцев"),
             level: 'Beginner',
             levelColor: 'text-emerald-400',
             tags: ['Figma', 'UI Design', 'UX', 'Prototyping'],
 
-            description: 'Освой UX/UI-дизайн и научись создавать удобные, современные и привлекательные интерфейсы для сайтов и мобильных приложений.',
+            description: t("courseById.Изучи основы UX/UI-дизайна, научись проектировать пользовательский опыт и создавать современные интерфейсы сайтов и мобильных приложений. Превращай идеи в стильные и удобные цифровые продукты"),
 
             subTitle: '7',
 
@@ -2620,25 +2581,25 @@ export default function CourseById() {
                 {
                     id: 1,
                     classIcon: 'fa-solid fa-chart-line',
-                    info: 'Уровень',
+                    info: t("information.Уровень"),
                     infor: 'Beginner',
                 },
                 {
                     id: 2,
                     classIcon: 'fa-solid fa-stopwatch',
-                    info: 'Длительность',
-                    infor: '4 месяцев',
+                    info: t("information.Длительность"),
+                    infor: t("information.3 месяцев"),
                 },
                 {
                     id: 3,
                     classIcon: 'fa-solid fa-calendar-check',
-                    info: 'Занятность',
-                    infor: '3 раза по 1,5ч/нед',
+                    info: t("information.Занятность"),
+                    infor: t("information.3 раза по 1,5ч/нед"),
                 },
                 {
                     id: 4,
                     classIcon: 'fa-solid fa-laptop',
-                    info: 'Формат',
+                    info: t("information.Формат"),
                     infor: 'Офлайн',
                 },
             ],
@@ -2705,13 +2666,13 @@ export default function CourseById() {
             cert: '/certificate/djangobg.png',
             id: 114,
             title: 'Python Django Developer',
-            duration: '4 месяцев',
+            duration: t("information.4 месяцев"),
             level: 'Middle',
             levelColor: 'text-amber-400',
 
             tags: ['Python', 'Django', 'PostgreSQL', 'REST API'],
 
-            description: 'Перейди на продвинутый уровень Python и научись создавать сложные, структурированные и эффективные программы.',
+            description: t("courseById.Перейди на продвинутыйt Python и научись создавать сложные, структурированные и эффективные программы"),
 
             subTitle: '14',
 
@@ -2730,50 +2691,50 @@ export default function CourseById() {
                 {
                     id: 1,
                     classIcon: 'fa-solid fa-chart-line',
-                    info: 'Уровень',
+                    info: t("information.Уровень"),
                     infor: 'Middle',
                 },
                 {
                     id: 2,
                     classIcon: 'fa-solid fa-stopwatch',
-                    info: 'Длительность',
-                    infor: '4 месяцев',
+                    info: t("information.Длительность"),
+                    infor: t("information.4 месяцев"),
                 },
                 {
                     id: 3,
                     classIcon: 'fa-solid fa-calendar-check',
-                    info: 'Занятность',
-                    infor: '3 раза по 1,5ч/нед',
+                    info: t("information.Занятность"),
+                    infor: t("information.3 раза по 1,5ч/нед"),
                 },
                 {
                     id: 4,
                     classIcon: 'fa-solid fa-laptop',
-                    info: 'Формат',
+                    info: t("information.Формат"),
                     infor: 'Офлайн',
                 },
             ],
 
-            why: 'Продвинутый Python помогает глубже понять программирование, писать качественный код и работать над более сложными реальными проектами.',
+            why: t("courseById.Продвинутый Python помогает глубже понять программирование, писать качественный код и работать над более сложными реальными проектами"),
 
             metodichka: [
-                'Основы Python',
-                'ООП в Python',
-                'Работа с файлами',
-                'SQLite и PostgreSQL',
-                'Введение в Django',
-                'MVT Архитектура',
-                'Модели и ORM',
-                'Шаблоны Django',
-                'Формы и валидация',
-                'Аутентификация пользователей',
-                'Права доступа',
-                'Django REST Framework',
-                'Создание REST API',
-                'JWT Авторизация',
-                'Работа с Docker',
-                'Деплой проекта',
-                'Git и GitHub',
-                'Финальный проект',
+                t("courseById.Основы Python"),
+                t("courseById.ООП в Python"),
+                t("courseById.Работа с файлами"),
+                t("courseById.SQLite и PostgreSQL"),
+                t("courseById.Введение в Django"),
+                t("courseById.MVT Архитектура"),
+                t("courseById.Модели и ORM"),
+                t("courseById.Шаблоны Django"),
+                t("courseById.Формы и валидация"),
+                t("courseById.Аутентификация пользователей"),
+                t("courseById.Права доступа"),
+                t("courseById.Django REST Framework"),
+                t("courseById.Создание REST API"),
+                t("courseById.JWT Авторизация"),
+                t("courseById.Работа с Docker"),
+                t("courseById.Деплой проекта"),
+                t("courseById.Git и GitHub"),
+                t("courseById.Финальный проект"),
             ],
 
             technologies: [
@@ -2829,6 +2790,7 @@ export default function CourseById() {
         },
     ];
 
+
     const course = courses.find(e => e.id == id)
     console.log(course.information);
 
@@ -2836,29 +2798,25 @@ export default function CourseById() {
     return (
         <div className="min-h-screen  font-sans pb-20">
 
-            {/* Navigation */}
             <div className="max-w-300 mx-auto px-4 pt-6">
                 <Link
                     to="/courses"
                     className="inline-flex items-center gap-2 text-sm text-slate-500 hover:text-[#12304A] transition-colors group"
                 >
                     <i className="fa-solid fa-arrow-left transition-transform group-hover:-translate-x-1"></i>
-                    К списку курсов
+                    {t("information.К списку курсов")}
                 </Link>
             </div>
 
             <main className="max-w-300 mx-auto px-4 mt-8 space-y-5">
 
-                {/* HERO */}
                 <section className="relative overflow-hidden rounded-3xl bg-[#12304A] text-white p-6 md:p-10">
 
-                    {/* Decorative circles */}
                     <div className="absolute -right-20 -top-20 w-72 h-72 rounded-full bg-[#ff9735]/10"></div>
                     <div className="absolute -right-10 bottom-[-100px] w-64 h-64 rounded-full bg-white/5"></div>
 
                     <div className="relative z-10 grid lg:grid-cols-[1fr_320px] gap-10 items-center">
 
-                        {/* Left */}
                         <div>
 
                             <div className="flex flex-wrap items-center gap-3 mb-5">
@@ -2881,7 +2839,6 @@ export default function CourseById() {
                                 {course.description}
                             </p>
 
-                            {/* Tags */}
                             <div className="flex flex-wrap gap-2 mb-8">
                                 {course.tags?.map((tag, i) => (
                                     <span
@@ -2904,7 +2861,6 @@ export default function CourseById() {
 
                         </div>
 
-                        {/* Right Course Preview */}
                         <div className="hidden lg:flex justify-center">
 
                             <div className="w-full max-w-70 aspect-square rounded-3xl bg-white/5 border border-white/10 backdrop-blur-sm flex flex-col items-center justify-center">
@@ -2915,7 +2871,7 @@ export default function CourseById() {
 
                                 <div className="text-center">
                                     <div className="text-sm text-white/50 mb-1">
-                                        Длительность
+                                        {t("information.Длительность")}
                                     </div>
 
                                     <div className="text-xl font-bold">
@@ -2931,7 +2887,6 @@ export default function CourseById() {
                 </section>
 
 
-                {/* INFORMATION */}
                 <section className="grid grid-cols-2 lg:grid-cols-4 gap-4">
 
                     {course.information?.map((item) => (
@@ -2960,7 +2915,6 @@ export default function CourseById() {
                 </section>
 
 
-                {/* WHY COURSE */}
                 <section className="rounded-2xl bg-white border border-slate-200 p-6 md:p-8">
 
                     <div className="flex items-start gap-4">
@@ -2971,7 +2925,7 @@ export default function CourseById() {
 
                         <div>
                             <h3 className="text-lg font-bold text-slate-900 mb-2">
-                                Почему этот курс?
+                                {t("information.Почему этот курс")}
                             </h3>
 
                             <p className="text-sm text-slate-500 leading-7 max-w-4xl">
@@ -2984,18 +2938,17 @@ export default function CourseById() {
                 </section>
 
 
-                {/* TECHNOLOGIES */}
                 <section className="rounded-2xl bg-white border border-slate-200 p-6 md:p-8">
 
                     <div className="flex items-center justify-between mb-6">
 
                         <div>
                             <h3 className="text-lg font-bold text-slate-900">
-                                Стек технологий
+                                {t("information.Стек технологий")}
                             </h3>
 
                             <p className="text-sm text-slate-400 mt-1">
-                                Технологии, которые вы изучите
+                                {t("information.Технологии, которые вы изучите")}
                             </p>
                         </div>
 
@@ -3029,7 +2982,6 @@ export default function CourseById() {
                 </section>
 
 
-                {/* PROGRAM */}
                 <section className="rounded-2xl bg-white border border-slate-200 p-6 md:p-8">
 
                     <div className="mb-6">
@@ -3041,13 +2993,13 @@ export default function CourseById() {
                             </div>
 
                             <h3 className="text-lg font-bold text-slate-900">
-                                Программа обучения
+                                {t("information.Программа обучения")}
                             </h3>
 
                         </div>
 
                         <p className="text-sm text-slate-400 ml-13">
-                            Основные темы курса
+                            {t("information.Основные темы курса")}
                         </p>
 
                     </div>
@@ -3081,16 +3033,15 @@ export default function CourseById() {
                 </section>
 
 
-                {/* BOTTOM CTA */}
                 <section className="rounded-2xl bg-gradient-to-r from-[#12304A] to-[#17496d] p-7 md:p-10 text-white flex flex-col md:flex-row items-center justify-between gap-6">
 
                     <div>
                         <h3 className="text-xl md:text-2xl font-bold mb-2">
-                            Готовы начать обучение?
+                            {t("information.Готовы начать обучение")}
                         </h3>
 
                         <p className="text-sm text-white/60">
-                            Оставьте заявку и мы свяжемся с вами.
+                            {t("information.Оставьте заявку и мы свяжемся с вами")}
                         </p>
                     </div>
 
@@ -3098,7 +3049,7 @@ export default function CourseById() {
                         to="/contact"
                         className="shrink-0 inline-flex items-center gap-2 rounded-xl px-6 py-3.5 text-sm font-semibold bg-[#ff9735] text-white hover:bg-[#ff8410]"
                     >
-                        Оставить заявку
+                        {t("navbar.Оставить заявку")}
                         <i className="fa-solid fa-arrow-right text-xs"></i>
                     </Link>
 

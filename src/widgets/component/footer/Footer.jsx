@@ -41,31 +41,35 @@ export default function Footer() {
                         <div className="mt-8 flex items-center gap-2">
 
                             <a
-                                href="#"
+                                href="https://www.instagram.com/itrun_tj/?hl=ru"
+                                target="_blank"
                                 className="flex h-11 w-11 items-center justify-center rounded-xl border border-slate-200 text-slate-700 transition-all duration-200 hover:-translate-y-1 hover:border-[#ff9735] hover:text-[#ff9735] dark:border-slate-700 dark:text-slate-300"
                             >
                                 <i className="fa-brands fa-instagram text-lg"></i>
                             </a>
 
                             <a
-                                href="#"
+                                href="https://t.me/itrun_kids_tj"
+                                target="_blank"
                                 className="flex h-11 w-11 items-center justify-center rounded-xl border border-slate-200 text-slate-700 transition-all duration-200 hover:-translate-y-1 hover:border-[#ff9735] hover:text-[#ff9735] dark:border-slate-700 dark:text-slate-300"
                             >
                                 <i className="fa-brands fa-telegram text-lg"></i>
                             </a>
 
-                            <a
-                                href="#"
-                                className="flex h-11 w-11 items-center justify-center rounded-xl border border-slate-200 text-slate-700 transition-all duration-200 hover:-translate-y-1 hover:border-[#ff9735] hover:text-[#ff9735] dark:border-slate-700 dark:text-slate-300"
-                            >
-                                <i className="fa-brands fa-youtube text-lg"></i>
-                            </a>
 
                             <a
-                                href="#"
+                                href="https://www.facebook.com/ItRunTJ/"
+                                target="_blank"
                                 className="flex h-11 w-11 items-center justify-center rounded-xl border border-slate-200 text-slate-700 transition-all duration-200 hover:-translate-y-1 hover:border-[#ff9735] hover:text-[#ff9735] dark:border-slate-700 dark:text-slate-300"
                             >
                                 <i className="fa-brands fa-facebook-f text-lg"></i>
+                            </a>
+                            <a
+                                href="https://www.linkedin.com/company/it-run-tj/posts/"
+                                target="_blank"
+                                className="flex h-11 w-11 items-center justify-center rounded-xl border border-slate-200 text-slate-700 transition-all duration-200 hover:-translate-y-1 hover:border-[#ff9735] hover:text-[#ff9735] dark:border-slate-700 dark:text-slate-300"
+                            >
+                                <i className="fa-brands fa-linkedin text-lg"></i>
                             </a>
 
                         </div>
@@ -223,7 +227,7 @@ export default function Footer() {
             </div>
 
             <a
-                href="https://t.me/itrun_kids_tj"
+                href="https://t.me/itrun_tjbot"
                 target="_blank"
                 rel="noreferrer"
                 className="

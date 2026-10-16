@@ -53,7 +53,7 @@ export default function HeroSection() {
 
                 <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
 
-                    <h1 className="text-2xl sm:text-4xl lg:text-4xl font-black tracking-tight leading-[1.1]">
+                    <h1 className="text-4xl sm:text-4xl lg:text-4xl font-black tracking-tight leading-[1.1]">
                         {t("main.firstSection.Таҳсилоти IT барои кӯдакон, наврасон, донишҷӯён ва калонсолон")}
                     </h1>
 

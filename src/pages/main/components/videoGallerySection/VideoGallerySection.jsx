@@ -59,12 +59,10 @@ function StoryCard({ item, onClick, isMain = false }) {
         isMain ? "w-full max-w-[260px] aspect-[4/5] mx-auto" : "w-32 sm:w-36 aspect-[4/5]"
       }`}
     >
-      {/* Градиентная рамка в стиле Instagram при наведении */}
       <div className="absolute inset-0 p-[2px] rounded-2xl bg-gradient-to-tr from-amber-500 via-orange-500 to-pink-500 opacity-75 group-hover:opacity-100 transition-opacity duration-300 -z-10">
         <div className="w-full h-full bg-slate-950 rounded-[14px]" />
       </div>
 
-      {/* Видео-обложка */}
       <video
         ref={videoRef}
         src={`${item.videoUrl}#t=0.001`}
@@ -75,14 +73,11 @@ function StoryCard({ item, onClick, isMain = false }) {
         playsInline
       />
 
-      {/* Затемнение и кнопка Play / Название */}
       <div className="absolute inset-0 bg-gradient-to-b from-slate-950/20 via-transparent to-slate-950/80 flex flex-col justify-between p-3">
-        {/* Верхняя полоска (индикатор сторис) */}
         <div className="w-full h-1 bg-white/30 rounded-full overflow-hidden">
           <div className="h-full bg-white w-1/3 rounded-full" />
         </div>
 
-        {/* Нижняя часть с иконкой и текстом */}
         <div className="flex items-center justify-between">
           <span className="text-white text-xs font-medium truncate drop-shadow">
             {item.title}
@@ -107,17 +102,14 @@ export default function VideoGallerySection() {
     <section className="relative z-10  bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        {/* Основной макет */}
         <div className="flex flex-col lg:flex-row items-center gap-8">
           
-          {/* Главная сторис (слева) */}
           {mainVideo && (
             <div className="w-full lg:w-1/4 flex justify-center">
               <StoryCard item={mainVideo} onClick={() => setActiveVideo(mainVideo)} isMain={true} />
             </div>
           )}
 
-          {/* Лента остальных сторис (горизонтальный скролл без полосы прокрутки) */}
           <div className="w-full lg:w-3/4">
             <div className="flex gap-3 overflow-x-auto pb-4 pt-2 px-2 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
               {sideVideos.map((item) => (
@@ -125,17 +117,13 @@ export default function VideoGallerySection() {
               ))}
             </div>
           </div>
-
         </div>
-
       </div>
 
-      {/* Компактное модальное окно просмотра сторис */}
       {activeVideo && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md">
-          <div className="relative w-full max-w-[260px] aspect-[4/5] bg-slate-950 border border-slate-800 rounded-2xl overflow-hidden shadow-2xl flex items-center justify-center">
+          <div className="relative w-full max-w-[370px] aspect-[4/5] bg-slate-950 border border-slate-800 rounded-2xl overflow-hidden shadow-2xl flex items-center justify-center">
             
-            {/* Кнопки управления сверху */}
             <div className="absolute top-3 right-3 z-20 flex items-center gap-2">
               <button
                 onClick={() => setIsMuted(!isMuted)}
@@ -151,7 +139,6 @@ export default function VideoGallerySection() {
               </button>
             </div>
 
-            {/* Само видео в модалке */}
             <video
               src={activeVideo.videoUrl}
               className="w-full h-full object-cover"

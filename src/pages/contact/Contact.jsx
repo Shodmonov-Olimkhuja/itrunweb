@@ -119,7 +119,7 @@ export default function Contact() {
     return (
         <div className="min-h-screen bg-white text-slate-800 font-sans">
             <section className="mx-auto max-w-6xl py-16 grid lg:grid-cols-5 gap-10">
-                <div id="form" className="lg:col-span-3 rounded-2xl border border-slate-200 p-6 md:p-8 shadow-sm scroll-mt-24">
+                <div id="form" className="lg:col-span-3 rounded-2xl border border-slate-200 mx-4 p-6 md:p-8 shadow-sm scroll-mt-24">
                     {sent ? (
                         <div className="py-10 text-center" role="status">
                             <div className="mx-auto h-14 w-14 rounded-full bg-green-100 text-green-600 grid place-items-center text-2xl">✓</div>
@@ -180,7 +180,7 @@ export default function Contact() {
                     )}
                 </div>
 
-                <aside className="lg:col-span-2 space-y-6">
+                <aside className="lg:col-span-2 mx-4 space-y-6">
                     {offices.map((o) => (
                         <div key={o.city} className="rounded-2xl bg-[#12304a] text-white p-6">
                             <h3 className="text-xl font-bold">{o.city}</h3>

@@ -1,3 +1,5 @@
+
+import { useState, useEffect, useRef } from "react";
 import { ChevronDown } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
@@ -21,21 +23,54 @@ const languages = [
 
 export default function LanguageSelect() {
     const { i18n } = useTranslation();
+    const [isOpen, setIsOpen] = useState(false);
+    const menuRef = useRef(null);
 
     const currentLanguage =
-        languages.find((lang) => lang.code === i18n.language) ||
+        languages.find((lang) => lang.code === i18n.language?.split("-")[0]) ||
         languages[0];
 
     const changeLanguage = (language) => {
         i18n.changeLanguage(language);
+        setIsOpen(false);
     };
 
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (menuRef.current && !menuRef.current.contains(event.target)) {
+                setIsOpen(false);
+            }
+        };
+
+        const handleEscape = (event) => {
+            if (event.key === "Escape") {
+                setIsOpen(false);
+            }
+        };
+
+        document.addEventListener("pointerdown", handleClickOutside);
+        document.addEventListener("keydown", handleEscape);
+
+        return () => {
+            document.removeEventListener("pointerdown", handleClickOutside);
+            document.removeEventListener("keydown", handleEscape);
+        };
+    }, []);
+
     return (
-        <div className="relative group">
+        <div ref={menuRef} className="relative z-[200]">
             <button
-                className=" flex items-center gap-2  text-sm font-medium text-slate-700 transition-all duration-200 hover:border-slate-300 "
+                type="button"
+                onClick={() => setIsOpen((prev) => !prev)}
+                aria-expanded={isOpen}
+                aria-haspopup="true"
+                className="flex items-center gap-2 rounded-lg px-2 py-2 text-sm font-medium text-slate-700 transition hover:bg-slate-100"
             >
-                <img className="w-5" src={currentLanguage.flag} alt="" />
+                <img
+                    className="w-5"
+                    src={currentLanguage.flag}
+                    alt=""
+                />
 
                 <span className="uppercase">
                     {currentLanguage.code}
@@ -43,32 +78,42 @@ export default function LanguageSelect() {
 
                 <ChevronDown
                     size={16}
-                    className=" transition-transform duration-200 group-hover:rotate-180   "
+                    className={`transition-transform duration-200 ${
+                        isOpen ? "rotate-180" : ""
+                    }`}
                 />
             </button>
-            <div
-                className=" invisible absolute right-0 top-full z-50 mt-2 w-40 origin-top-right scale-95 rounded-xl border border-slate-200 bg-white p-1 opacity-0 shadow-xl transition-all duration-200 group-hover:visible group-hover:scale-100 group-hover:opacity-100 " >
-                {languages.map((language) => (
-                    <button
-                        key={language.code}
-                        onClick={() => changeLanguage(language.code)}
-                        className=" flex w-full items-center gap-3 rounded-lg px-3 py-2.5 text-left text-sm transition hover:bg-slate-100 "
-                    >
-                        <img className="w-5" src={language.flag} alt="" />
 
+            {isOpen && (
+                <div className="absolute right-0 top-full z-[200] mt-2 w-40 rounded-xl border border-slate-200 bg-white p-1 shadow-xl">
+                    {languages.map((language) => (
+                        <button
+                            key={language.code}
+                            type="button"
+                            onClick={() => changeLanguage(language.code)}
+                            className={`flex w-full items-center gap-3 rounded-lg px-3 py-2.5 text-left text-sm transition hover:bg-slate-100 ${
+                                currentLanguage.code === language.code
+                                    ? "bg-orange-50"
+                                    : ""
+                            }`}
+                        >
+                            <img
+                                className="w-5"
+                                src={language.flag}
+                                alt=""
+                            />
 
-                        <span className="flex-1">
-                            {language.name}
-                        </span>
-
-                        {i18n.language === language.code && (
-                            <span className="text-orange-500">
-                                ✓
+                            <span className="flex-1">
+                                {language.name}
                             </span>
-                        )}
-                    </button>
-                ))}
-            </div>
+
+                            {currentLanguage.code === language.code && (
+                                <span className="text-orange-500">✓</span>
+                            )}
+                        </button>
+                    ))}
+                </div>
+            )}
         </div>
     );
 }

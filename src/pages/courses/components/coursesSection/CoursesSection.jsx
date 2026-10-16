@@ -406,7 +406,7 @@ export default function CoursesListLight() {
 
                                     <div className="px-6 pb-6 pt-2 border-t border-gray-100 mt-auto flex items-center justify-end">
                                         <Link
-                                            to={`/courses/${course.id}`}
+                                            to={`/course/${course.id}`}
                                             className="w-full text-center py-2.5 bg-[#ff9735] text-white hover:bg-[#ff8410] hover:text-white text-xs font-semibold rounded-xl  transition-all flex items-center justify-center gap-2"
                                         >
                                             {t("information.Подробнее о курсе")} <i className="fa-solid fa-arrow-right"></i>

@@ -58,9 +58,9 @@ export default function CommunitySection() {
                         </div>
 
                         <a href="https://t.me/itrun_kids_tj" target="_blank" >
-                            <button className=" hidden sm:flex items-center justify-center rounded-xl bg-[#ff9735] my-3 px-5 py-3 text-sm font-semibold text-white shadow-sm transition-all duration-200  hover:bg-[#ff8410] hover:shadow-lg hover:shadow-orange-500/20 active:translate-y-0 ">
+                            <button className=" sm:flex items-center justify-center rounded-xl bg-[#ff9735] my-3 px-5 py-3 text-sm font-semibold text-white shadow-sm transition-all duration-200  hover:bg-[#ff8410] hover:shadow-lg hover:shadow-orange-500/20 active:translate-y-0 ">
                                 <span>{t("main.firstSection.Ба ҷомеа ҳамроҳ шудан")}</span>
-                                <ArrowRight size={18} />
+                               
                             </button>
                         </a>
                     </div>

@@ -18,6 +18,7 @@ export default function Contact() {
     const [form, setForm] = useState({ name: "", phone: "", city: "Худжанд", audience: audiences[0], course: courses[courses.length - 1], message: "" });
     const [sent, setSent] = useState(false);
     const [error, setError] = useState("");
+    const [loading, setLoading] = useState(false);
 
 
     const { t } = useTranslation()
@@ -46,14 +47,74 @@ export default function Contact() {
 
     const update = (k) => (e) => setForm({ ...form, [k]: e.target.value });
 
-    const submit = (e) => {
+
+    const submit = async (e) => {
         e.preventDefault();
-        if (form.name.trim().length < 2) return setError("Укажите имя");
-        if (form.phone.replace(/\D/g, "").length < 9) return setError("Укажите телефон полностью, например +992 900 00 00 00");
         setError("");
-        console.log("Заявка:", form);
-        setSent(true);
+
+        if (form.name.trim().length < 2) {
+            setError("Укажите имя");
+            return;
+        }
+
+        if (form.phone.replace(/\D/g, "").length < 9) {
+            setError("Укажите телефон полностью, например +992 900 00 00 00");
+            return;
+        }
+
+        setLoading(true);
+
+        try {
+            const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+            const supabaseKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
+
+            if (!supabaseUrl || !supabaseKey) {
+                throw new Error("Не настроены переменные окружения Supabase.");
+            }
+
+            const response = await fetch(
+                `${supabaseUrl}/functions/v1/alfacrm-lead`,
+                {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "apikey": supabaseKey,
+                        "Authorization": `Bearer ${supabaseKey}`,
+                    },
+                    body: JSON.stringify({
+                        name: form.name.trim(),
+                        phone: form.phone.trim(),
+                        city: form.city,
+                        course: [
+                            form.course,
+                            `Кто будет учиться: ${form.audience}`,
+                            form.message.trim()
+                                ? `Комментарий: ${form.message.trim()}`
+                                : "",
+                        ].filter(Boolean).join(". "),
+                    }),
+                }
+            );
+
+            const result = await response.json();
+
+            if (!response.ok || !result.success) {
+                throw new Error(
+                    result.error || "Не удалось отправить заявку."
+                );
+            }
+
+            setSent(true);
+        } catch (err) {
+            console.error("Ошибка отправки заявки:", err);
+            setError(
+                err.message || "Ошибка соединения. Попробуйте ещё раз."
+            );
+        } finally {
+            setLoading(false);
+        }
     };
+
 
     return (
         <div className="min-h-screen bg-white text-slate-800 font-sans">
@@ -87,7 +148,6 @@ export default function Contact() {
                                     <select className={inputCls} value={form.city} onChange={update("city")}>
                                         <option>Худжанд</option>
                                         <option>Душанбе</option>
-                                        <option>Другой город (онлайн)</option>
                                     </select>
                                 </Field>
                                 <Field label={t("contact.Кто будет учиться")} >
@@ -105,8 +165,16 @@ export default function Contact() {
                                 <textarea className={inputCls} rows={4} placeholder="Уровень подготовки, удобное время, вопросы" value={form.message} onChange={update("message")} />
                             </Field>
                             {error && <p className="text-sm text-red-600" role="alert">{error}</p>}
-                            <button type="submit" className="w-full rounded-xl bg-orange-400 hover:bg-orange-500 transition-colors px-6 py-3.5 font-semibold text-white">
-                                {t("contact.Записаться на бесплатный урок")}
+                            <button
+                                type="submit"
+                                disabled={loading}
+                                className="w-full rounded-xl bg-orange-400 hover:bg-orange-500
+    disabled:cursor-not-allowed disabled:opacity-60
+    transition-colors px-6 py-3.5 font-semibold text-white"
+                            >
+                                {loading
+                                    ? "Отправка заявки..."
+                                    : t("contact.Записаться на бесплатный урок")}
                             </button>
                         </form>
                     )}

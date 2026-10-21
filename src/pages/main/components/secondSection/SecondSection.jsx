@@ -46,7 +46,7 @@ export default function SecondSection() {
                 {stats.map((item) => (
                     <article
                         key={item.id}
-                        className="group relative isolate min-h-[245px] overflow-hidden rounded-3xl border border-slate-200/80 bg-white p-6 shadow-sm transition-all duration-500 hover:-translate-y-1.5 hover:border-orange-200 hover:shadow-xl hover:shadow-slate-900/[0.06] sm:min-h-[270px] sm:p-7 lg:min-h-[290px]"
+                        className="group relative isolate min-h-[245px] overflow-hidden rounded-3xl border border-gray-200 bg-white p-6 shadow-sm transition-all duration-500 hover:-translate-y-1.5 hover:border-orange-200 hover:shadow-xl hover:shadow-slate-900/[0.06] sm:min-h-[270px] sm:p-7 lg:min-h-[290px]"
                     >
                         {/* Soft background gradient */}
                         <div

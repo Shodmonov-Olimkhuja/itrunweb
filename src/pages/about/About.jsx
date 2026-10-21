@@ -26,7 +26,7 @@ export default function About() {
         { name: t("aboutus.Girls who Code — «Девушки, которые кодят»"), period: "Фев – Июл 2022", donor: "ПРООН" },
         { name: t("aboutus.Подготовка IT-специалистов для аутсорса"), period: "Авг 2022 – Окт 2023", donor: "USAID-FGI" },
         { name: t("aboutus.Data Science на Python для девушек"), period: "Окт 2022 – Фев 2023", donor: "ПРООН" },
-        { name: t("aboutus.IT-хакатон: цифровое решение по трудоустройству"), period: "Май 2023", donor: "ПРООН" },
+        { name: t("aboutus.IT-хакатон цифровое решение по трудоустройству"), period: "Май 2023", donor: "ПРООН" },
         { name: t("aboutus.Цифровая грамотность и фронтенд для афганских беженцев и местного сообщества"), period: "Сен 2023 – Май 2024", donor: "IOM" },
         { name: t("aboutus.IT-курсы для 120 девушек с трудоустройством"), period: "Сен 2023 – Окт 2024", donor: "ПРООН" },
     ];

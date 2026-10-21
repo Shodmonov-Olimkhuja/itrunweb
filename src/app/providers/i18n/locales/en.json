@@ -12,12 +12,12 @@
         "Тамос": "Contact",
         "Касби серталаби IT-ро аз худ кунед ва ба коркарди даромад оғоз намоед": "Master a high-demand IT profession and start earning an income.",
         "Ҳамаи ҳуқуқҳо ҳифз шудаанд": "All rights reserved.",
-        "кӯчаи Сомонӣ 51А, Хуҷанд, Тоҷикистон": "51A Somoni Street, Khujand, Tajikistan",
+        "кӯчаи Сомонӣ 51А, Хуҷанд, Тоҷикистон": "51A Ismoili Somoni Street, Khujand, Tajikistan",
         "кӯчаи Айни 166, Малика Собирова 35, Душанбе, Тоҷикистон": "166 Ayni Street, 35 Malika Sobirova, Dushanbe, Tajikistan"
     },
     "main": {
         "firstSection": {
-            "Таҳсилоти IT барои кӯдакон, наврасон, донишҷӯён ва калонсолон": "IT education for children, teenagers, students, and adults",
+            "Таҳсилоти IT барои кӯдакон, наврасон, донишҷӯён ва калонсолон": "ITRUN — a school of programming and digital technologies for children, teenagers, and adults",
             "Бо омӯзгорони ботаҷриба касбҳои рақамии серталабро аз худ намоед. Мо барномасозӣ, дизайн, зеҳни сунъӣ ва дигар самтҳои муосири IT-ро аз дарси аввал то пайдо кардани кори аввал дар соҳаи технология омӯзиш медиҳем": "Master in-demand digital professions with experienced instructors. We provide training in programming, design, artificial intelligence, and other modern IT fields—guiding you from your very first lesson all the way to landing your first job in the tech industry.",
             "Ба дарси ройгон номнавис шудан": "Sign up for the free lesson",
             "Посмотреть все курсы": "View all courses",
@@ -111,7 +111,7 @@
         "Girls who Code — «Девушки, которые кодят»": "Girls who Code — «Girls Who Code»",
         "Подготовка IT-специалистов для аутсорса": "IT Specialist Training for Outsourcing",
         "Data Science на Python для девушек": "Data Science with Python for Girls",
-        "IT-хакатон: цифровое решение по трудоустройству": "IT Hackathon: A Digital Employment Solution",
+        "IT-хакатон цифровое решение по трудоустройству": "IT Hackathon: A Digital Employment Solution",
         "Цифровая грамотность и фронтенд для афганских беженцев и местного сообщества": "Digital Literacy and Frontend Development for Afghan Refugees and the Local Community",
         "IT-курсы для 120 девушек с трудоустройством": "IT Courses for 120 Girls with Employment Opportunities",
         "Хакатоны": "Hackathons",
@@ -422,6 +422,11 @@
         "Разработка SPA приложений": "SPA application development",
         "Создание визуального контента": "Creating visual content",
         "Дизайн интерфейсов и UX": "Interface design and UX",
-        "Продвинутый Python и архитектура": "Advanced Python and architecture"
+        "Продвинутый Python и архитектура": "Advanced Python and architecture",
+        "Базовый": "Basic",
+        "Начальный": "Beginner",
+        "Начальный/Средный": "Beginner/Intermediate",
+        "Средный": "Intermediate",
+        "Средный/Продвинутый": "Intermediate/Advanced"
     }
 }

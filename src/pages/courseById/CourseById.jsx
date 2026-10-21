@@ -16,7 +16,7 @@ export default function CourseById() {
             description: t("courseById.Получи фундаментальные навыки frontend-разработки от структуры HTML-страниц до адаптивного дизайна с помощью CSS. Создай собственные проекты и подготовься к изучению JavaScript"),
             subTitle: '1',
             information: [
-                { id: 1, classIcon: 'fa-solid fa-chart-line', info: t("information.Уровень"), infor: 'Beginer' },
+                { id: 1, classIcon: 'fa-solid fa-chart-line', info: t("information.Уровень"), infor: t("course.Начальный") },
                 {
                     id: 2,
                     classIcon: 'fa-solid fa-stopwatch',
@@ -97,7 +97,7 @@ export default function CourseById() {
                     id: 1,
                     classIcon: 'fa-solid fa-chart-line',
                     info: t("information.Уровень"),
-                    infor: 'Junior',
+                    infor: t("course.Средный"),
                 },
                 {
                     id: 2,
@@ -196,7 +196,7 @@ export default function CourseById() {
                     id: 1,
                     classIcon: 'fa-solid fa-chart-line',
                     info: t("information.Уровень"),
-                    infor: 'Middle',
+                    infor: t("course.Средный/Продвинутый"),
                 },
                 {
                     id: 2,
@@ -306,7 +306,7 @@ export default function CourseById() {
                     id: 1,
                     classIcon: 'fa-solid fa-chart-line',
                     info: t("information.Уровень"),
-                    infor: 'Beginner',
+                    infor: t("course.Начальный"),
                 },
                 {
                     id: 2,
@@ -416,7 +416,7 @@ export default function CourseById() {
                     id: 1,
                     classIcon: 'fa-solid fa-chart-line',
                     info: t("information.Уровень"),
-                    infor: 'Beginner',
+                    infor: t("course.Средный"),
                 },
                 {
                     id: 2,
@@ -518,7 +518,7 @@ export default function CourseById() {
                     id: 1,
                     classIcon: 'fa-solid fa-chart-line',
                     info: t("information.Уровень"),
-                    infor: 'Middle',
+                    infor: t("course.Средный/Продвинутый"),
                 },
                 {
                     id: 2,
@@ -641,7 +641,7 @@ export default function CourseById() {
                     id: 1,
                     classIcon: 'fa-solid fa-chart-line',
                     info: t("information.Уровень"),
-                    infor: 'Middle',
+                    infor: t("course.Средный/Продвинутый"),
                 },
                 {
                     id: 2,
@@ -761,7 +761,7 @@ export default function CourseById() {
                     id: 1,
                     classIcon: 'fa-solid fa-chart-line',
                     info: t("information.Уровень"),
-                    infor: 'Beginner',
+                    infor: t("course.Базовый"),
                 },
                 {
                     id: 2,
@@ -869,7 +869,7 @@ export default function CourseById() {
                     id: 1,
                     classIcon: 'fa-solid fa-chart-line',
                     info: t("information.Уровень"),
-                    infor: 'Beginner',
+                    infor: t("course.Средный/Продвинутый"),
                 },
                 {
                     id: 2,
@@ -981,7 +981,7 @@ export default function CourseById() {
                     id: 1,
                     classIcon: 'fa-solid fa-chart-line',
                     info: t("information.Уровень"),
-                    infor: 'Beginner',
+                    infor: t("course.Базовый"),
                 },
                 {
                     id: 2,
@@ -1090,7 +1090,7 @@ export default function CourseById() {
                     id: 1,
                     classIcon: 'fa-solid fa-chart-line',
                     info: t("information.Уровень"),
-                    infor: 'Beginner',
+                    infor: t("course.Базовый"),
                 },
                 {
                     id: 2,
@@ -1197,7 +1197,7 @@ export default function CourseById() {
                     id: 1,
                     classIcon: 'fa-solid fa-chart-line',
                     info: t("information.Уровень"),
-                    infor: 'Middle',
+                    infor: t("course.Средный/Продвинутый"),
                 },
                 {
                     id: 2,
@@ -1327,7 +1327,7 @@ export default function CourseById() {
                     id: 1,
                     classIcon: 'fa-solid fa-chart-line',
                     info: t("information.Уровень"),
-                    infor: 'Beginner',
+                    infor: t("course.Базовый"),
                 },
                 {
                     id: 2,
@@ -1437,7 +1437,7 @@ export default function CourseById() {
                     id: 1,
                     classIcon: 'fa-solid fa-chart-line',
                     info: t("information.Уровень"),
-                    infor: 'Beginner',
+                    infor: t("course.Базовый"),
                 },
                 {
                     id: 2,
@@ -1535,7 +1535,7 @@ export default function CourseById() {
             glow: 'hover:shadow-cyan-500/10',
             image: '/html&cssImage.png',
             information: [
-                { id: 1, classIcon: 'fa-solid fa-chart-line', info: t("information.Уровень"), infor: 'Beginer' },
+                { id: 1, classIcon: 'fa-solid fa-chart-line', info: t("information.Уровень"), infor: t("course.Начальный") },
                 {
                     id: 2,
                     classIcon: 'fa-solid fa-stopwatch',
@@ -1616,7 +1616,7 @@ export default function CourseById() {
                     id: 1,
                     classIcon: 'fa-solid fa-chart-line',
                     info: t("information.Уровень"),
-                    infor: 'Junior',
+                    infor: t("course.Средный"),
                 },
                 {
                     id: 2,
@@ -1718,7 +1718,7 @@ export default function CourseById() {
                     id: 1,
                     classIcon: 'fa-solid fa-chart-line',
                     info: t("information.Уровень"),
-                    infor: 'Beginner',
+                    infor: t("course.Средный"),
                 },
                 {
                     id: 2,
@@ -1820,7 +1820,7 @@ export default function CourseById() {
                     id: 1,
                     classIcon: 'fa-solid fa-chart-line',
                     info: t("information.Уровень"),
-                    infor: 'Beginner',
+                    infor: t("course.Базовый"),
                 },
                 {
                     id: 2,
@@ -1926,7 +1926,7 @@ export default function CourseById() {
                     id: 1,
                     classIcon: 'fa-solid fa-chart-line',
                     info: t("information.Уровень"),
-                    infor: 'Intermediate',
+                    infor: t("course.Средный/Продвинутый"),
                 },
                 {
                     id: 2,
@@ -2021,7 +2021,7 @@ export default function CourseById() {
                     id: 1,
                     classIcon: 'fa-solid fa-chart-line',
                     info: t("information.Уровень"),
-                    infor: 'Middle',
+                    infor: t("course.Средный/Продвинутый"),
                 },
                 {
                     id: 2,
@@ -2147,7 +2147,7 @@ export default function CourseById() {
                     id: 1,
                     classIcon: 'fa-solid fa-chart-line',
                     info: t("information.Уровень"),
-                    infor: 'Advanced',
+                    infor: t("course.Начальный/Средный"),
                 },
                 {
                     id: 2,
@@ -2258,7 +2258,7 @@ export default function CourseById() {
                     id: 1,
                     classIcon: 'fa-solid fa-chart-line',
                     info: t("information.Уровень"),
-                    infor: 'Intermediate',
+                    infor: t("course.Средный/Продвинутый"),
                 },
                 {
                     id: 2,
@@ -2364,7 +2364,7 @@ export default function CourseById() {
                     id: 1,
                     classIcon: 'fa-solid fa-chart-line',
                     info: t("information.Уровень"),
-                    infor: 'Middle',
+                    infor: t("course.Средный/Продвинутый"),
                 },
                 {
                     id: 2,
@@ -2474,7 +2474,7 @@ export default function CourseById() {
                     id: 1,
                     classIcon: 'fa-solid fa-chart-line',
                     info: t("information.Уровень"),
-                    infor: 'Beginner',
+                    infor: t("course.Начальный"),
                 },
                 {
                     id: 2,
@@ -2582,7 +2582,7 @@ export default function CourseById() {
                     id: 1,
                     classIcon: 'fa-solid fa-chart-line',
                     info: t("information.Уровень"),
-                    infor: 'Beginner',
+                    infor: t("course.Начальный"),
                 },
                 {
                     id: 2,
@@ -2692,7 +2692,7 @@ export default function CourseById() {
                     id: 1,
                     classIcon: 'fa-solid fa-chart-line',
                     info: t("information.Уровень"),
-                    infor: 'Middle',
+                    infor: t("course.Средный/Продвинутый"),
                 },
                 {
                     id: 2,

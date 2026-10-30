@@ -19,7 +19,7 @@ export default function SecondSection() {
         },
         {
             id: "02",
-            number: "1000+",
+            number: "2000+",
             label: t("main.firstSection.Шумораи хатмкардагон"),
             image: kepka,
             accent: "from-blue-400/20 via-blue-300/5 to-transparent",

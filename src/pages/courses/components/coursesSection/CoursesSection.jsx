@@ -9,14 +9,13 @@ export default function CoursesListLight() {
 
     const { t } = useTranslation();
 
-    // Постоянные ключи категорий не зависят от выбранного языка.
     const categories = [
         { key: 'all', label: t('courses.mainPage.Все') },
         { key: 'Спортивное программирование', label: t('course.Спортивное программирование') },
         { key: 'Разработка', label: t('course.Разработка') },
         { key: 'Дизайн', label: t('course.Дизайн') },
         { key: 'Мобильная разработка', label: t('course.Мобильная разработка') },
-        { key: 'Детские курсы', label: t('course.Десткие курсы') },
+        { key: 'Детские курсы', label: t('course.Детские курсы') },
         { key: 'Data', label: 'Data' },
     ];
 
@@ -369,7 +368,11 @@ export default function CoursesListLight() {
                                     <div className="p-6 space-y-4">
                                         <div className="flex items-center justify-between flex-wrap gap-2">
                                             <span className="px-3 py-1 bg-[#12304A] text-white text-xs font-semibold rounded-full border border-blue-200">
-                                                {t(`course.${course.category}`)}
+                                                {
+                                                    course.category === "Data" 
+                                                    ? course.category
+                                                    : t(`course.${course.category}`)
+                                                }
                                             </span>
 
                                             <div className="flex flex-wrap gap-1">

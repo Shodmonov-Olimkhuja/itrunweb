@@ -1,20 +1,20 @@
 import { useState, useRef } from "react";
 import { Play, X, Volume2, VolumeX } from "lucide-react";
 
-import v1 from "../../../../../public/main/videos/video1.mp4";
-import v2 from "../../../../../public/main/videos/video2.mp4";
-import v3 from "../../../../../public/main/videos/video3.mp4";
-import v4 from "../../../../../public/main/videos/video4.mp4";
-import v5 from "../../../../../public/main/videos/video5.mp4";
-import v6 from "../../../../../public/main/videos/video6.mp4";
-import v7 from "../../../../../public/main/videos/video7.mp4";
-import v8 from "../../../../../public/main/videos/video8.mp4";
-import v9 from "../../../../../public/main/videos/video9.mp4";
-import v10 from "../../../../../public/main/videos/video10.mp4";
-import v11 from "../../../../../public/main/videos/video11.mp4";
-import v12 from "../../../../../public/main/videos/video12.mp4";
-import v13 from "../../../../../public/main/videos/video13.mp4";
-import v14 from "../../../../../public/main/videos/video14.mp4";
+const v1  = "/main/videos/video1.mp4";
+const v2  = "/main/videos/video2.mp4";
+const v3  = "/main/videos/video3.mp4";
+const v4  = "/main/videos/video4.mp4";
+const v5  = "/main/videos/video5.mp4";
+const v6  = "/main/videos/video6.mp4";
+const v7  = "/main/videos/video7.mp4";
+const v8  = "/main/videos/video8.mp4";
+const v9  = "/main/videos/video9.mp4";
+const v10 = "/main/videos/video10.mp4";
+const v11 = "/main/videos/video11.mp4";
+const v12 = "/main/videos/video12.mp4";
+const v13 = "/main/videos/video13.mp4";
+const v14 = "/main/videos/video14.mp4";
 
 const videos = [
   { id: 1, videoUrl: v1, title: "История 1" },

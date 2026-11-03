@@ -1,8 +1,8 @@
 
 import { Link } from "react-router-dom"
-import bgProccesLite from "../../../../../public/main/bgProccesLite.png"
 import { useTranslation } from "react-i18next"
 
+const bgProccesLite = "/main/bgProccesLite.png"
 
 
 

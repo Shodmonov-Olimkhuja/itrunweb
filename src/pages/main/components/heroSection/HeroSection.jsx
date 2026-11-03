@@ -2,12 +2,13 @@ import { useState, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { Terminal, TypingAnimation, AnimatedSpan } from "./components/Terminal";
 import { Link } from "react-router-dom";
-import student1 from "../../../../../public/main/student1.png";
-import student2 from "../../../../../public/main/student2.png";
-import student3 from "../../../../../public/main/student3.png";
-import student4 from "../../../../../public/main/student4.png";
-import student5 from "../../../../../public/main/student5.png";
-import student6 from "../../../../../public/main/student6.png";
+
+const student1 = "/main/student1.png";
+const student2 = "/main/student2.png";
+const student3 = "/main/student3.png";
+const student4 = "/main/student4.png";
+const student5 = "/main/student5.png";
+const student6 = "/main/student6.png";
 
 export default function HeroSection() {
     const { t } = useTranslation();

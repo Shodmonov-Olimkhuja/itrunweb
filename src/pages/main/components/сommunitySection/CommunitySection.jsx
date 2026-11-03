@@ -2,10 +2,10 @@ import { useState } from "react";
 import { Trophy, MessageSquare, Users, Calendar, ArrowRight, X } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
-import demoDay from "../../../../../public/main/demoDay.png"
-import khakaton from "../../../../../public/main/khakaton.png"
-import trening from "../../../../../public/main/trening.png"
-import dostijeniya from "../../../../../public/main/dostijeniya.png"
+const demoDay = "/main/demoDay.png"
+const khakaton = "/main/khakaton.png"
+const trening = "/main/trening.png"
+const dostijeniya = "/main/dostijeniya.png"
 
 
 export default function CommunitySection() {

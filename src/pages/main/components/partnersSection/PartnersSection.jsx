@@ -1,23 +1,23 @@
 
-import l1 from "../../../../../public/main/Partners/1.png";
-import l2 from "../../../../../public/main/Partners/2.png";
-import l3 from "../../../../../public/main/Partners/3.png";
-import l4 from "../../../../../public/main/Partners/4.png";
-import l5 from "../../../../../public/main/Partners/5.png";
-import l6 from "../../../../../public/main/Partners/6.png";
-import l7 from "../../../../../public/main/Partners/7.webp";
-import l8 from "../../../../../public/main/Partners/8.png";
-import l9 from "../../../../../public/main/Partners/9.png";
-import l10 from "../../../../../public/main/Partners/10.png";
-import l11 from "../../../../../public/main/Partners/11.png";
-import l12 from "../../../../../public/main/Partners/12.png";
-import l13 from "../../../../../public/main/Partners/13.png";
-import l14 from "../../../../../public/main/Partners/14.png";
-import l15 from "../../../../../public/main/Partners/15.png";
-import l16 from "../../../../../public/main/Partners/16.png";
-import l17 from "../../../../../public/main/Partners/17.png";
-import l18 from "../../../../../public/main/Partners/18.png";
-import leskhata from "../../../../../public/main/Partners/eskhata.png";
+const l1 = "/main/Partners/1.png";
+const l2 = "/main/Partners/2.png";
+const l3 = "/main/Partners/3.png";
+const l4 = "/main/Partners/4.png";
+const l5 = "/main/Partners/5.png";
+const l6 = "/main/Partners/6.png";
+const l7 = "/main/Partners/7.webp";
+const l8 = "/main/Partners/8.png";
+const l9 = "/main/Partners/9.png";
+const l10 = "/main/Partners/10.png";
+const l11 = "/main/Partners/11.png";
+const l12 = "/main/Partners/12.png";
+const l13 = "/main/Partners/13.png";
+const l14 = "/main/Partners/14.png";
+const l15 = "/main/Partners/15.png";
+const l16 = "/main/Partners/16.png";
+const l17 = "/main/Partners/17.png";
+const l18 = "/main/Partners/18.png";
+const leskhata = "/main/Partners/eskhata.png";
 
 import { useTranslation } from "react-i18next";
 

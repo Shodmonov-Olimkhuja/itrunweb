@@ -1,10 +1,10 @@
 
 import { useTranslation } from "react-i18next";
 
-import book from "../../../../../public/main/book.png";
-import diplomat from "../../../../../public/main/diplomat.png";
-import handshake from "../../../../../public/main/handshake.png";
-import kepka from "../../../../../public/main/kepka.png";
+const book = "/main/book.png";
+const diplomat = "/main/diplomat.png";
+const handshake = "/main/handshake.png";
+const kepka = "/main/kepka.png";
 
 export default function SecondSection() {
     const { t } = useTranslation();

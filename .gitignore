@@ -28,3 +28,4 @@ dist-ssr
 *.rar
 *.zip
 tmp*
+.env

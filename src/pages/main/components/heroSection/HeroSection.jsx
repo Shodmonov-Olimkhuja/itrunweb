@@ -64,13 +64,13 @@ export default function HeroSection() {
 
                     <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
                         <Link
-                            to="/register"
+                            to="/contact"
                             className="hidden sm:flex items-center justify-center rounded-xl bg-[#ff9735] px-5 py-3 text-sm font-semibold text-white shadow-sm transition-all duration-200 hover:bg-[#ff8410] hover:shadow-lg hover:shadow-orange-500/20 active:translate-y-0"
                         >
                             {t("main.firstSection.Ба дарси ройгон номнавис шудан")}
                         </Link>
                         <Link
-                            to="/register"
+                            to="/courses"
                             className="hidden sm:flex items-center justify-center rounded-xl px-5 py-3 text-sm font-semibold bg-[#12304ad0] text-white shadow-sm transition-all duration-200 hover:bg-[#12304A] hover:shadow-lg hover:shadow-orange-500/20 active:translate-y-0"
                         >
                             {t("main.firstSection.Посмотреть все курсы")}

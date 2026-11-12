@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import CertificateSection from "./components/certificateSection/CertificateSection";
 import HeroSection from "./components/heroSection/HeroSection";
 import PartnersSection from "./components/partnersSection/PartnersSection";
@@ -11,21 +10,31 @@ import VideoGallerySection from "./components/videoGallerySection/VideoGallerySe
 import CommunitySection from "./components/сommunitySection/CommunitySection";
 import RegisterForCourse from "./components/registerforCourseSection/RegisterforCourseSection";
 
+import SEO from "../../shared/seo/Seo"
+
 
 export default function Main() {
     return (
-        <div>
-            <HeroSection />
-            <SecondSection />
-            <ProccessSection />
-            <ThirdSection />
-            <PartnersSection />
-            <VideoGallerySection />
-            <TechMindMapSection />
-            <CertificateSection />
-            <CommunitySection />
-            <Review />
-            <RegisterForCourse/>
-        </div>
+        <>  
+            <SEO
+                title="IT RUN — Школа программирования в Таджикистане"
+                description="IT-RUN — школа программирования в Худжанде и Душанбе. Изучайте Frontend, Backend, Python, искусственный интеллект и дизайн. Обучение детей, подростков и взрослых."
+                url="https://itrun.tj/"
+            />
+
+            <div>
+                <HeroSection />
+                <SecondSection />
+                <ProccessSection />
+                <ThirdSection />
+                <PartnersSection />
+                <VideoGallerySection />
+                <TechMindMapSection />
+                <CertificateSection />
+                <CommunitySection />
+                <Review />
+                <RegisterForCourse />
+            </div>
+        </>
     )
 }

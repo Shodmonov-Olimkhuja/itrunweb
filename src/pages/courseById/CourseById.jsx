@@ -1,6 +1,8 @@
 import { useTranslation } from 'react-i18next';
 import { useParams, Link } from 'react-router-dom';
 
+import SEO from '../../shared/seo/Seo';
+
 export default function CourseById() {
     const { id } = useParams();
     const { t } = useTranslation()
@@ -36,7 +38,7 @@ export default function CourseById() {
                     infor: 'Офлайн',
                 },
             ],
-            why: t("courseById.Идеальный фундамент для старта в веб-разработке и создания коммерческих проектов") ,
+            why: t("courseById.Идеальный фундамент для старта в веб-разработке и создания коммерческих проектов"),
             metodichka: [
                 t("courseById.Основы HTML"),
                 t("courseById.Основы CSS"),
@@ -2001,7 +2003,7 @@ export default function CourseById() {
 
             tags: ['C#', '.NET', 'SQL Server', 'Backend'],
 
-            description:t("courseById.Освой C# и .NET и научись создавать современные серверные приложения, API и полноценные backend-системы"),
+            description: t("courseById.Освой C# и .NET и научись создавать современные серверные приложения, API и полноценные backend-системы"),
 
             subTitle: '24',
 
@@ -2043,7 +2045,7 @@ export default function CourseById() {
                 },
             ],
 
-            why:t("courseById.C# и .NET — мощные технологии для разработки веб-приложений, API, CRM-систем и корпоративных решений"),
+            why: t("courseById.C# и .NET — мощные технологии для разработки веб-приложений, API, CRM-систем и корпоративных решений"),
 
             metodichka: [
                 t("courseById.Основы C#"),
@@ -2456,7 +2458,7 @@ export default function CourseById() {
             tags: ['Design', 'Photoshop', 'Illustrator', 'Figma'],
 
             description:
-            t("courseById.Визуализация идей, создание стильной графики и разработка коммерческих дизайн-проектов с нуля"),
+                t("courseById.Визуализация идей, создание стильной графики и разработка коммерческих дизайн-проектов с нуля"),
 
             icon: 'fa-solid fa-palette',
             iconBg: 'bg-pink-500/20',
@@ -2496,7 +2498,7 @@ export default function CourseById() {
                 },
             ],
 
-            why:t("courseById.Графический дизайн помогает развить креативность, визуальное мышление и научиться превращать идеи в качественные и привлекательные дизайны"),
+            why: t("courseById.Графический дизайн помогает развить креативность, визуальное мышление и научиться превращать идеи в качественные и привлекательные дизайны"),
 
             metodichka: [
                 t("courseById.Введение в графический дизайн основы композиции и визуальной иерархии"),
@@ -2791,12 +2793,27 @@ export default function CourseById() {
     ];
 
 
-    const course = courses.find(e => e.id == id)
-    console.log(course.information);
+    const course = courses.find((item) => item.id === Number(id));
+
+    if (!course) {
+        return (
+            <div className="min-h-screen flex items-center justify-center">
+                <h1 className="text-2xl font-bold">
+                    Курс не найден
+                </h1>
+            </div>
+        );
+    }
 
 
     return (
         <div className="min-h-screen  font-sans pb-20">
+
+            <SEO
+                title={`Курс ${course.title} в IT RUN  Худжанд и Душанбе`}
+                description={`${course.description} Обучение в школе программирования IT-RUN в Худжанде и Душанбе.`}
+                url={`https://itrun.tj/course/${course.id}`}
+            />
 
             <div className="max-w-300 mx-auto px-4 pt-6">
                 <Link
